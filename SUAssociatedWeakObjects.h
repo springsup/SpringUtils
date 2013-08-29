@@ -29,10 +29,9 @@
  */
 
 #define IMPLEMENT_ASSOCIATED_WEAK_PROPERTY_ATOMIC( PROPERTY_TYPE, PROPERTY_NAME, SETTER_NAME, ATOMIC ) \
-static char kProperty##PROPERTY_NAME; \
 - ( PROPERTY_TYPE ) PROPERTY_NAME \
 { \
-    SUAssociatedWeakRefHolder *holder = objc_getAssociatedObject( self, &kProperty##PROPERTY_NAME ); \
+    SUAssociatedWeakRefHolder *holder = objc_getAssociatedObject( self, @selector( PROPERTY_NAME ) ); \
     if( Nil != holder ) return ( PROPERTY_TYPE ) holder->object; \
     else                return Nil; \
 } \
@@ -42,7 +41,7 @@ static char kProperty##PROPERTY_NAME; \
     objc_AssociationPolicy policy     = ATOMIC ? OBJC_ASSOCIATION_RETAIN : OBJC_ASSOCIATION_RETAIN_NONATOMIC; \
     SUAssociatedWeakRefHolder *holder = [[SUAssociatedWeakRefHolder alloc] init]; \
     holder->object = PROPERTY_NAME; \
-    objc_setAssociatedObject(self, &kProperty##PROPERTY_NAME, holder, policy ); \
+    objc_setAssociatedObject(self, @selector( PROPERTY_NAME ), holder, policy ); \
 } \
 
 /** Implements non-retaining, non-atomic getters and setters for an object-type property.

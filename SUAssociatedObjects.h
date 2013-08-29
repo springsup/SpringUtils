@@ -25,16 +25,15 @@
  */
 
 #define IMPLEMENT_ASSOCIATED_PROPERTY_ATOMIC( PROPERTY_TYPE, PROPERTY_NAME, SETTER_NAME, ATOMIC ) \
-static char kProperty##PROPERTY_NAME; \
 - ( PROPERTY_TYPE ) PROPERTY_NAME \
 { \
-    return ( PROPERTY_TYPE )objc_getAssociatedObject( self, &kProperty##PROPERTY_NAME ); \
+    return ( PROPERTY_TYPE )objc_getAssociatedObject( self, @selector( PROPERTY_NAME ) ); \
 } \
 \
 - (void) SETTER_NAME :( PROPERTY_TYPE ) PROPERTY_NAME \
 { \
     objc_AssociationPolicy policy = ATOMIC ? OBJC_ASSOCIATION_RETAIN : OBJC_ASSOCIATION_RETAIN_NONATOMIC; \
-    objc_setAssociatedObject( self, &kProperty##PROPERTY_NAME, PROPERTY_NAME, policy ); \
+    objc_setAssociatedObject( self, @selector( PROPERTY_NAME ), PROPERTY_NAME, policy ); \
 } \
 
 /** Implements standard, non-atomic getters and setters for an object-type property.
@@ -67,10 +66,9 @@ static char kProperty##PROPERTY_NAME; \
  */
 
 #define IMPLEMENT_ASSOCIATED_SCALAR_PROPERTY_ATOMIC( PROPERTY_TYPE, PROPERTY_NAME, SETTER_NAME, ATOMIC ) \
-static char kProperty##PROPERTY_NAME; \
 - ( PROPERTY_TYPE ) PROPERTY_NAME \
 { \
-    NSValue *boxedVal = objc_getAssociatedObject( self, &kProperty##PROPERTY_NAME ); \
+    NSValue *boxedVal = objc_getAssociatedObject( self, @selector( PROPERTY_NAME ) ); \
     PROPERTY_TYPE sVal; \
     if( Nil != boxedVal )   [boxedVal getValue: &sVal]; \
     else                    memset( &sVal, 0, sizeof(PROPERTY_TYPE) ); \
@@ -81,7 +79,7 @@ static char kProperty##PROPERTY_NAME; \
 { \
     NSValue *boxedVal               = [NSValue value: &PROPERTY_NAME withObjCType: @encode( PROPERTY_TYPE )]; \
     objc_AssociationPolicy policy   = ATOMIC ? OBJC_ASSOCIATION_RETAIN : OBJC_ASSOCIATION_RETAIN_NONATOMIC; \
-    objc_setAssociatedObject( self, &kProperty##PROPERTY_NAME, boxedVal, policy ); \
+    objc_setAssociatedObject( self, @selector( PROPERTY_NAME ), boxedVal, policy ); \
 } \
 
 /** Implements standard, non-atomic getters and setters for a scalar-type property.
