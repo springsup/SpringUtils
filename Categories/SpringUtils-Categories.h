@@ -13,6 +13,7 @@
 
 #import "NSObject+KVOHelpers.h"
 #import "NSObject+KVOBlocks.h"
+#import "NSObject+KVOSelectors.h"
 
 #import "NSDateComponents+NSCalendarUnitSubscripting.h"
 

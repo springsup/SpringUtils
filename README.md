@@ -18,6 +18,7 @@ Categories support:
 
 * Updating keys (when manually invoking KVO)
 * KVO observation callback blocks. These methods use tokens which release the observation when the token is deallocated, so keep the token around as long as you want the block to watch the key-path.
+* KVO observation using simple target/selector mechanics. Also uses auto-removing tokens to release the KVO observation.
 
 ##NSSet
 Categories support:
