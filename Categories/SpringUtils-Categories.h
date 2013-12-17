@@ -15,6 +15,8 @@
 #import "NSObject+KVOBlocks.h"
 #import "NSObject+KVOSelectors.h"
 
+#import "NSValue+SUInterpolable.h"
+
 #import "NSDateComponents+NSCalendarUnitSubscripting.h"
 
 #import "NSSet+Initialisers.h"

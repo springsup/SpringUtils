@@ -11,17 +11,8 @@
 #ifndef SpringUtils_SpringUtils_h
 #define SpringUtils_SpringUtils_h
 
-// Categories
-
-#import "SpringUtils-Categories.h"
-
-// General
-
-#import "SUAssociatedObjects.h"
-#import "SUAssociatedWeakObjects.h"
-
-#import "SUSystemVersion.h"
-
-#import "SUComparatorTools.h"
+#import "Categories/SpringUtils-Categories.h"
+#import "Classes/SpringUtils-Classes.h"
+#import "Utilities/SpringUtils-Utilities.h"
 
 #endif

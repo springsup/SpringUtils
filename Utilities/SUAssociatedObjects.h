@@ -52,6 +52,37 @@
 /**@name Implementing scalar-type properties */
 
 
+/** Implements standard getters and setters for a scalar-type property with the specified association policy and default value.
+ *
+ *  If the property is read before it has been set, the specified default value is returned.
+ *
+ *  An example of usage would be:
+ *  `IMPLEMENT_ASSOCIATED_SCALAR_PROPERTY_ATOMIC_DEFAULT( CGPoint, importantLocation, setImportantLocation, NO, CGPointZero )`
+ *
+ *  @param  PROPERTY_TYPE   The type of the property.
+ *  @param  PROPERTY_NAME   The name of the getter to be synthesized.
+ *  @param  SETTER_NAME     The name of the setter to be synthesized.
+ *  @param  ATOMIC          A boolean value which determines whether the property is set atomically.
+ *  @param  DEFAULT         The value to return if the property is read before it has been set.
+ */
+
+#define IMPLEMENT_ASSOCIATED_SCALAR_PROPERTY_ATOMIC_DEFAULT( PROPERTY_TYPE, PROPERTY_NAME, SETTER_NAME, ATOMIC, DEFAULT ) \
+- ( PROPERTY_TYPE ) PROPERTY_NAME \
+{ \
+NSValue *boxedVal = objc_getAssociatedObject( self, @selector( PROPERTY_NAME ) ); \
+if( Nil == boxedVal ) return DEFAULT; \
+PROPERTY_TYPE sVal; \
+[boxedVal getValue: &sVal]; \
+return sVal; \
+} \
+\
+- (void) SETTER_NAME :( PROPERTY_TYPE ) PROPERTY_NAME \
+{ \
+NSValue *boxedVal               = [NSValue value: &PROPERTY_NAME withObjCType: @encode( PROPERTY_TYPE )]; \
+objc_AssociationPolicy policy   = ATOMIC ? OBJC_ASSOCIATION_RETAIN : OBJC_ASSOCIATION_RETAIN_NONATOMIC; \
+objc_setAssociatedObject( self, @selector( PROPERTY_NAME ), boxedVal, policy ); \
+} \
+
 /** Implements standard getters and setters for a scalar-type property with the specified association policy.
  *
  *  If the property is read before it has been set, the returned value will be zero-initialised.

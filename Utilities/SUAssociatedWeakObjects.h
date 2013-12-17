@@ -8,7 +8,8 @@
 //  https://raw.github.com/springsup/SpringUtils/master/LICENSE
 //
 
-#import "objc/runtime.h"
+#import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 @interface SUAssociatedWeakRefHolder : NSObject
 {
