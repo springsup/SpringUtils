@@ -138,9 +138,9 @@ IMPLEMENT_ASSOCIATED_SCALAR_PROPERTY( pthread_mutex_t *, releaseLock, setRelease
         }
         
         // Set the class of the object.
-        
-        object_setClass( object, subclass );
+
         [object createReleaseLock];
+        object_setClass( object, subclass );
     }
     else
     {
