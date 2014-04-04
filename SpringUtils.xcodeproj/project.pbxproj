@@ -1,0 +1,1060 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBE64A9E18ED966500CCC7BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64A9D18ED966500CCC7BD /* Cocoa.framework */; };
+		CBE64AB318ED966500CCC7BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64AB218ED966500CCC7BD /* XCTest.framework */; };
+		CBE64AB418ED966500CCC7BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64A9D18ED966500CCC7BD /* Cocoa.framework */; };
+		CBE64AB718ED966500CCC7BD /* SpringUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64A9A18ED966500CCC7BD /* SpringUtils.framework */; };
+		CBE64ABD18ED966500CCC7BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBE64ABB18ED966500CCC7BD /* InfoPlist.strings */; };
+		CBE64ABF18ED966500CCC7BD /* SpringUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */; };
+		CBE64ACE18ED96C800CCC7BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACD18ED96C800CCC7BD /* Foundation.framework */; };
+		CBE64ADB18ED96C800CCC7BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64AB218ED966500CCC7BD /* XCTest.framework */; };
+		CBE64ADC18ED96C800CCC7BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACD18ED96C800CCC7BD /* Foundation.framework */; };
+		CBE64ADE18ED96C800CCC7BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ADD18ED96C800CCC7BD /* UIKit.framework */; };
+		CBE64AE118ED96C800CCC7BD /* libSpringUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACC18ED96C800CCC7BD /* libSpringUtils.a */; };
+		CBE64AF018ED973900CCC7BD /* SpringUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */; };
+		CBE64BCD18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9918EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h */; };
+		CBE64BCE18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
+		CBE64BCF18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
+		CBE64BD018EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
+		CBE64BD118EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
+		CBE64BD218EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9B18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h */; };
+		CBE64BD318EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CBE64BD418EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; };
+		CBE64BD518EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CBE64BD618EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; };
+		CBE64BD718EDC83900CCC7BD /* SUDeallocationCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9D18EDC83900CCC7BD /* SUDeallocationCallback.h */; };
+		CBE64BD818EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
+		CBE64BD918EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
+		CBE64BDA18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
+		CBE64BDB18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
+		CBE64BDC18EDC83900CCC7BD /* NSCalendar+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9F18EDC83900CCC7BD /* NSCalendar+Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64BDD18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
+		CBE64BDE18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
+		CBE64BDF18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
+		CBE64BE018EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
+		CBE64BE118EDC83900CCC7BD /* NSDate+SUInterpolable.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA118EDC83900CCC7BD /* NSDate+SUInterpolable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64BE218EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
+		CBE64BE318EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
+		CBE64BE418EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
+		CBE64BE518EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
+		CBE64BE618EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA318EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64BE718EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
+		CBE64BE818EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
+		CBE64BE918EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
+		CBE64BEA18EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
+		CBE64BEB18EDC83900CCC7BD /* NSObject+KVOBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA518EDC83900CCC7BD /* NSObject+KVOBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64BEC18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
+		CBE64BED18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
+		CBE64BEE18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
+		CBE64BEF18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
+		CBE64BF018EDC83900CCC7BD /* NSObject+KVOHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA718EDC83900CCC7BD /* NSObject+KVOHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64BF118EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
+		CBE64BF218EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
+		CBE64BF318EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
+		CBE64BF418EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
+		CBE64BF518EDC83900CCC7BD /* NSObject+KVOSelectors.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA918EDC83900CCC7BD /* NSObject+KVOSelectors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64BF618EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
+		CBE64BF718EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
+		CBE64BF818EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
+		CBE64BF918EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
+		CBE64BFA18EDC83900CCC7BD /* NSSet+Initialisers.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BAB18EDC83900CCC7BD /* NSSet+Initialisers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64BFB18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
+		CBE64BFC18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
+		CBE64BFD18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
+		CBE64BFE18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
+		CBE64BFF18EDC83900CCC7BD /* NSValue+SUInterpolable.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BAD18EDC83900CCC7BD /* NSValue+SUInterpolable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C0018EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
+		CBE64C0118EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
+		CBE64C0218EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
+		CBE64C0318EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
+		CBE64C0418EDC83900CCC7BD /* SpringUtils-Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C0518EDC83900CCC7BD /* SpringUtils-Classes.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB118EDC83900CCC7BD /* SpringUtils-Classes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C0818EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
+		CBE64C0918EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
+		CBE64C0A18EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
+		CBE64C0B18EDC83900CCC7BD /* SUAnimatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB418EDC83900CCC7BD /* SUAnimatorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C0C18EDC83900CCC7BD /* SUClassBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB518EDC83900CCC7BD /* SUClassBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C0D18EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
+		CBE64C0E18EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
+		CBE64C0F18EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
+		CBE64C1018EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
+		CBE64C1118EDC83900CCC7BD /* SUMethodBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB718EDC83900CCC7BD /* SUMethodBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C1218EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
+		CBE64C1318EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
+		CBE64C1418EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
+		CBE64C1518EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
+		CBE64C1618EDC83900CCC7BD /* SUWeakMutableSet.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB918EDC83900CCC7BD /* SUWeakMutableSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C1718EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
+		CBE64C1818EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
+		CBE64C1918EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
+		CBE64C1A18EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
+		CBE64C1B18EDC83900CCC7BD /* SUInterpolable.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BBC18EDC83900CCC7BD /* SUInterpolable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C1C18EDC83900CCC7BD /* SpringUtils-Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BBE18EDC83900CCC7BD /* SpringUtils-Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C1D18EDC83900CCC7BD /* SUAssociatedObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BBF18EDC83900CCC7BD /* SUAssociatedObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C1E18EDC83900CCC7BD /* SUAssociatedWeakObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC018EDC83900CCC7BD /* SUAssociatedWeakObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C1F18EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
+		CBE64C2018EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
+		CBE64C2118EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
+		CBE64C2218EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
+		CBE64C2318EDC83900CCC7BD /* SUBase.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC218EDC83900CCC7BD /* SUBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C2418EDC83900CCC7BD /* SUComparatorTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC318EDC83900CCC7BD /* SUComparatorTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C2518EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
+		CBE64C2618EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
+		CBE64C2718EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
+		CBE64C2818EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
+		CBE64C2918EDC83900CCC7BD /* SURuntimeAssertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC518EDC83900CCC7BD /* SURuntimeAssertions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C2A18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
+		CBE64C2B18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
+		CBE64C2C18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
+		CBE64C2D18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
+		CBE64C2E18EDC83900CCC7BD /* SUSoundTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC718EDC83900CCC7BD /* SUSoundTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C2F18EDC83900CCC7BD /* SUSystemVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC818EDC83900CCC7BD /* SUSystemVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C3018EDC83900CCC7BD /* SUTimeFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC918EDC83900CCC7BD /* SUTimeFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C3118EDC83900CCC7BD /* SUTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BCA18EDC83900CCC7BD /* SUTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C3218EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
+		CBE64C3318EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
+		CBE64C3418EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
+		CBE64C3518EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
+		CBE64C3618EDC83900CCC7BD /* SUValueInterpolation.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BCC18EDC83900CCC7BD /* SUValueInterpolation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C3718EDC94400CCC7BD /* SpringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64AAA18ED966500CCC7BD /* SpringUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE64C5518EDCAD900CCC7BD /* SpringUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64AAA18ED966500CCC7BD /* SpringUtils.h */; };
+		CBE64C5618EDCAD900CCC7BD /* NSCalendar+Utilities.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64B9F18EDC83900CCC7BD /* NSCalendar+Utilities.h */; };
+		CBE64C5718EDCAD900CCC7BD /* NSDate+SUInterpolable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BA118EDC83900CCC7BD /* NSDate+SUInterpolable.h */; };
+		CBE64C5818EDCAD900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BA318EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h */; };
+		CBE64C5918EDCAD900CCC7BD /* NSObject+KVOBlocks.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BA518EDC83900CCC7BD /* NSObject+KVOBlocks.h */; };
+		CBE64C5A18EDCAD900CCC7BD /* NSObject+KVOHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BA718EDC83900CCC7BD /* NSObject+KVOHelpers.h */; };
+		CBE64C5B18EDCAD900CCC7BD /* NSObject+KVOSelectors.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BA918EDC83900CCC7BD /* NSObject+KVOSelectors.h */; };
+		CBE64C5C18EDCAD900CCC7BD /* NSSet+Initialisers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BAB18EDC83900CCC7BD /* NSSet+Initialisers.h */; };
+		CBE64C5D18EDCAD900CCC7BD /* NSValue+SUInterpolable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BAD18EDC83900CCC7BD /* NSValue+SUInterpolable.h */; };
+		CBE64C5E18EDCAD900CCC7BD /* SpringUtils-Categories.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */; };
+		CBE64C5F18EDCAD900CCC7BD /* SpringUtils-Classes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BB118EDC83900CCC7BD /* SpringUtils-Classes.h */; };
+		CBE64C6018EDCAD900CCC7BD /* SUAnimator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BB218EDC83900CCC7BD /* SUAnimator.h */; };
+		CBE64C6118EDCAD900CCC7BD /* SUAnimatorDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BB418EDC83900CCC7BD /* SUAnimatorDelegate.h */; };
+		CBE64C6218EDCAD900CCC7BD /* SUClassBuilder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BB518EDC83900CCC7BD /* SUClassBuilder.h */; };
+		CBE64C6318EDCAD900CCC7BD /* SUMethodBuilder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BB718EDC83900CCC7BD /* SUMethodBuilder.h */; };
+		CBE64C6418EDCAD900CCC7BD /* SUWeakMutableSet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BB918EDC83900CCC7BD /* SUWeakMutableSet.h */; };
+		CBE64C6518EDCAD900CCC7BD /* SUInterpolable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BBC18EDC83900CCC7BD /* SUInterpolable.h */; };
+		CBE64C6618EDCAD900CCC7BD /* SpringUtils-Utilities.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BBE18EDC83900CCC7BD /* SpringUtils-Utilities.h */; };
+		CBE64C6718EDCAD900CCC7BD /* SUAssociatedObjects.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BBF18EDC83900CCC7BD /* SUAssociatedObjects.h */; };
+		CBE64C6818EDCAD900CCC7BD /* SUAssociatedWeakObjects.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BC018EDC83900CCC7BD /* SUAssociatedWeakObjects.h */; };
+		CBE64C6918EDCAD900CCC7BD /* SUBase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BC218EDC83900CCC7BD /* SUBase.h */; };
+		CBE64C6A18EDCAD900CCC7BD /* SUComparatorTools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BC318EDC83900CCC7BD /* SUComparatorTools.h */; };
+		CBE64C6B18EDCAD900CCC7BD /* SURuntimeAssertions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BC518EDC83900CCC7BD /* SURuntimeAssertions.h */; };
+		CBE64C6C18EDCAD900CCC7BD /* SUSoundTools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BC718EDC83900CCC7BD /* SUSoundTools.h */; };
+		CBE64C6D18EDCAD900CCC7BD /* SUSystemVersion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BC818EDC83900CCC7BD /* SUSystemVersion.h */; };
+		CBE64C6E18EDCAD900CCC7BD /* SUTimeFrame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BC918EDC83900CCC7BD /* SUTimeFrame.h */; };
+		CBE64C6F18EDCAD900CCC7BD /* SUTypes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BCA18EDC83900CCC7BD /* SUTypes.h */; };
+		CBE64C7018EDCAD900CCC7BD /* SUValueInterpolation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64BCC18EDC83900CCC7BD /* SUValueInterpolation.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBE64AB518ED966500CCC7BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBE64A9118ED966500CCC7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBE64A9918ED966500CCC7BD;
+			remoteInfo = SpringUtils;
+		};
+		CBE64ADF18ED96C800CCC7BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBE64A9118ED966500CCC7BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBE64ACB18ED96C800CCC7BD;
+			remoteInfo = SpringUtils;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBE64ACA18ED96C800CCC7BD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				CBE64C5518EDCAD900CCC7BD /* SpringUtils.h in CopyFiles */,
+				CBE64C5618EDCAD900CCC7BD /* NSCalendar+Utilities.h in CopyFiles */,
+				CBE64C5718EDCAD900CCC7BD /* NSDate+SUInterpolable.h in CopyFiles */,
+				CBE64C5818EDCAD900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h in CopyFiles */,
+				CBE64C5918EDCAD900CCC7BD /* NSObject+KVOBlocks.h in CopyFiles */,
+				CBE64C5A18EDCAD900CCC7BD /* NSObject+KVOHelpers.h in CopyFiles */,
+				CBE64C5B18EDCAD900CCC7BD /* NSObject+KVOSelectors.h in CopyFiles */,
+				CBE64C5C18EDCAD900CCC7BD /* NSSet+Initialisers.h in CopyFiles */,
+				CBE64C5D18EDCAD900CCC7BD /* NSValue+SUInterpolable.h in CopyFiles */,
+				CBE64C5E18EDCAD900CCC7BD /* SpringUtils-Categories.h in CopyFiles */,
+				CBE64C5F18EDCAD900CCC7BD /* SpringUtils-Classes.h in CopyFiles */,
+				CBE64C6018EDCAD900CCC7BD /* SUAnimator.h in CopyFiles */,
+				CBE64C6118EDCAD900CCC7BD /* SUAnimatorDelegate.h in CopyFiles */,
+				CBE64C6218EDCAD900CCC7BD /* SUClassBuilder.h in CopyFiles */,
+				CBE64C6318EDCAD900CCC7BD /* SUMethodBuilder.h in CopyFiles */,
+				CBE64C6418EDCAD900CCC7BD /* SUWeakMutableSet.h in CopyFiles */,
+				CBE64C6518EDCAD900CCC7BD /* SUInterpolable.h in CopyFiles */,
+				CBE64C6618EDCAD900CCC7BD /* SpringUtils-Utilities.h in CopyFiles */,
+				CBE64C6718EDCAD900CCC7BD /* SUAssociatedObjects.h in CopyFiles */,
+				CBE64C6818EDCAD900CCC7BD /* SUAssociatedWeakObjects.h in CopyFiles */,
+				CBE64C6918EDCAD900CCC7BD /* SUBase.h in CopyFiles */,
+				CBE64C6A18EDCAD900CCC7BD /* SUComparatorTools.h in CopyFiles */,
+				CBE64C6B18EDCAD900CCC7BD /* SURuntimeAssertions.h in CopyFiles */,
+				CBE64C6C18EDCAD900CCC7BD /* SUSoundTools.h in CopyFiles */,
+				CBE64C6D18EDCAD900CCC7BD /* SUSystemVersion.h in CopyFiles */,
+				CBE64C6E18EDCAD900CCC7BD /* SUTimeFrame.h in CopyFiles */,
+				CBE64C6F18EDCAD900CCC7BD /* SUTypes.h in CopyFiles */,
+				CBE64C7018EDCAD900CCC7BD /* SUValueInterpolation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CBE64A9A18ED966500CCC7BD /* SpringUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpringUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE64A9D18ED966500CCC7BD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CBE64AA018ED966500CCC7BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CBE64AA118ED966500CCC7BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CBE64AA218ED966500CCC7BD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CBE64AA518ED966500CCC7BD /* SpringUtils-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SpringUtils-Info.plist"; path = "../SpringUtils-Info.plist"; sourceTree = "<group>"; };
+		CBE64AAA18ED966500CCC7BD /* SpringUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringUtils.h; sourceTree = "<group>"; };
+		CBE64AB118ED966500CCC7BD /* SpringUtilsTests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpringUtilsTests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE64AB218ED966500CCC7BD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CBE64ABA18ED966500CCC7BD /* SpringUtilsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpringUtilsTests-Info.plist"; sourceTree = "<group>"; };
+		CBE64ABC18ED966500CCC7BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringUtilsTests.m; sourceTree = "<group>"; };
+		CBE64ACC18ED96C800CCC7BD /* libSpringUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpringUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE64ACD18ED96C800CCC7BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CBE64ADA18ED96C800CCC7BD /* SpringUtilsTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpringUtilsTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE64ADD18ED96C800CCC7BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CBE64B9918EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SUDeallocationNotifier.h"; sourceTree = "<group>"; };
+		CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SUDeallocationNotifier.m"; sourceTree = "<group>"; };
+		CBE64B9B18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SUDeallocationNotifier_Internal.h"; sourceTree = "<group>"; };
+		CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SUDeallocationNotifier_Internal.m"; sourceTree = "<group>"; };
+		CBE64B9D18EDC83900CCC7BD /* SUDeallocationCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUDeallocationCallback.h; sourceTree = "<group>"; };
+		CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUDeallocationCallback.m; sourceTree = "<group>"; };
+		CBE64B9F18EDC83900CCC7BD /* NSCalendar+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Utilities.h"; sourceTree = "<group>"; };
+		CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Utilities.m"; sourceTree = "<group>"; };
+		CBE64BA118EDC83900CCC7BD /* NSDate+SUInterpolable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SUInterpolable.h"; sourceTree = "<group>"; };
+		CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SUInterpolable.m"; sourceTree = "<group>"; };
+		CBE64BA318EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+NSCalendarUnitSubscripting.h"; sourceTree = "<group>"; };
+		CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+NSCalendarUnitSubscripting.m"; sourceTree = "<group>"; };
+		CBE64BA518EDC83900CCC7BD /* NSObject+KVOBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlocks.h"; sourceTree = "<group>"; };
+		CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOBlocks.m"; sourceTree = "<group>"; };
+		CBE64BA718EDC83900CCC7BD /* NSObject+KVOHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOHelpers.h"; sourceTree = "<group>"; };
+		CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOHelpers.m"; sourceTree = "<group>"; };
+		CBE64BA918EDC83900CCC7BD /* NSObject+KVOSelectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOSelectors.h"; sourceTree = "<group>"; };
+		CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOSelectors.m"; sourceTree = "<group>"; };
+		CBE64BAB18EDC83900CCC7BD /* NSSet+Initialisers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+Initialisers.h"; sourceTree = "<group>"; };
+		CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+Initialisers.m"; sourceTree = "<group>"; };
+		CBE64BAD18EDC83900CCC7BD /* NSValue+SUInterpolable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+SUInterpolable.h"; sourceTree = "<group>"; };
+		CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+SUInterpolable.m"; sourceTree = "<group>"; };
+		CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpringUtils-Categories.h"; sourceTree = "<group>"; };
+		CBE64BB118EDC83900CCC7BD /* SpringUtils-Classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpringUtils-Classes.h"; sourceTree = "<group>"; };
+		CBE64BB218EDC83900CCC7BD /* SUAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUAnimator.h; sourceTree = "<group>"; };
+		CBE64BB318EDC83900CCC7BD /* SUAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUAnimator.m; sourceTree = "<group>"; };
+		CBE64BB418EDC83900CCC7BD /* SUAnimatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUAnimatorDelegate.h; sourceTree = "<group>"; };
+		CBE64BB518EDC83900CCC7BD /* SUClassBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUClassBuilder.h; sourceTree = "<group>"; };
+		CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUClassBuilder.m; sourceTree = "<group>"; };
+		CBE64BB718EDC83900CCC7BD /* SUMethodBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUMethodBuilder.h; sourceTree = "<group>"; };
+		CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUMethodBuilder.m; sourceTree = "<group>"; };
+		CBE64BB918EDC83900CCC7BD /* SUWeakMutableSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUWeakMutableSet.h; sourceTree = "<group>"; };
+		CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUWeakMutableSet.m; sourceTree = "<group>"; };
+		CBE64BBC18EDC83900CCC7BD /* SUInterpolable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUInterpolable.h; sourceTree = "<group>"; };
+		CBE64BBE18EDC83900CCC7BD /* SpringUtils-Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpringUtils-Utilities.h"; sourceTree = "<group>"; };
+		CBE64BBF18EDC83900CCC7BD /* SUAssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUAssociatedObjects.h; sourceTree = "<group>"; };
+		CBE64BC018EDC83900CCC7BD /* SUAssociatedWeakObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUAssociatedWeakObjects.h; sourceTree = "<group>"; };
+		CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUAssociatedWeakObjects.m; sourceTree = "<group>"; };
+		CBE64BC218EDC83900CCC7BD /* SUBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBase.h; sourceTree = "<group>"; };
+		CBE64BC318EDC83900CCC7BD /* SUComparatorTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUComparatorTools.h; sourceTree = "<group>"; };
+		CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUComparatorTools.m; sourceTree = "<group>"; };
+		CBE64BC518EDC83900CCC7BD /* SURuntimeAssertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SURuntimeAssertions.h; sourceTree = "<group>"; };
+		CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SUSoundTools.c; sourceTree = "<group>"; };
+		CBE64BC718EDC83900CCC7BD /* SUSoundTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUSoundTools.h; sourceTree = "<group>"; };
+		CBE64BC818EDC83900CCC7BD /* SUSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUSystemVersion.h; sourceTree = "<group>"; };
+		CBE64BC918EDC83900CCC7BD /* SUTimeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTimeFrame.h; sourceTree = "<group>"; };
+		CBE64BCA18EDC83900CCC7BD /* SUTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTypes.h; sourceTree = "<group>"; };
+		CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SUValueInterpolation.c; sourceTree = "<group>"; };
+		CBE64BCC18EDC83900CCC7BD /* SUValueInterpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUValueInterpolation.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBE64A9618ED966500CCC7BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64A9E18ED966500CCC7BD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AAE18ED966500CCC7BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64AB718ED966500CCC7BD /* SpringUtils.framework in Frameworks */,
+				CBE64AB418ED966500CCC7BD /* Cocoa.framework in Frameworks */,
+				CBE64AB318ED966500CCC7BD /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AC918ED96C800CCC7BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64ACE18ED96C800CCC7BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AD718ED96C800CCC7BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64ADB18ED96C800CCC7BD /* XCTest.framework in Frameworks */,
+				CBE64ADE18ED96C800CCC7BD /* UIKit.framework in Frameworks */,
+				CBE64AE118ED96C800CCC7BD /* libSpringUtils.a in Frameworks */,
+				CBE64ADC18ED96C800CCC7BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBE64A9018ED966500CCC7BD = {
+			isa = PBXGroup;
+			children = (
+				CBE64AA318ED966500CCC7BD /* SpringUtils */,
+				CBE64AB818ED966500CCC7BD /* SpringUtilsTests */,
+				CBE64A9C18ED966500CCC7BD /* Frameworks */,
+				CBE64A9B18ED966500CCC7BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBE64A9B18ED966500CCC7BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64A9A18ED966500CCC7BD /* SpringUtils.framework */,
+				CBE64AB118ED966500CCC7BD /* SpringUtilsTests-OSX.xctest */,
+				CBE64ACC18ED96C800CCC7BD /* libSpringUtils.a */,
+				CBE64ADA18ED96C800CCC7BD /* SpringUtilsTests-iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBE64A9C18ED966500CCC7BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64A9D18ED966500CCC7BD /* Cocoa.framework */,
+				CBE64AB218ED966500CCC7BD /* XCTest.framework */,
+				CBE64ACD18ED96C800CCC7BD /* Foundation.framework */,
+				CBE64ADD18ED96C800CCC7BD /* UIKit.framework */,
+				CBE64A9F18ED966500CCC7BD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBE64A9F18ED966500CCC7BD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64AA018ED966500CCC7BD /* Foundation.framework */,
+				CBE64AA118ED966500CCC7BD /* CoreData.framework */,
+				CBE64AA218ED966500CCC7BD /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CBE64AA318ED966500CCC7BD /* SpringUtils */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64AAA18ED966500CCC7BD /* SpringUtils.h */,
+				CBE64B9718EDC83900CCC7BD /* Categories */,
+				CBE64BB018EDC83900CCC7BD /* Classes */,
+				CBE64BBB18EDC83900CCC7BD /* Protocols */,
+				CBE64BBD18EDC83900CCC7BD /* Utilities */,
+				CBE64AA418ED966500CCC7BD /* Supporting Files */,
+			);
+			path = SpringUtils;
+			sourceTree = "<group>";
+		};
+		CBE64AA418ED966500CCC7BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64AA518ED966500CCC7BD /* SpringUtils-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBE64AB818ED966500CCC7BD /* SpringUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */,
+				CBE64AB918ED966500CCC7BD /* Supporting Files */,
+			);
+			path = SpringUtilsTests;
+			sourceTree = "<group>";
+		};
+		CBE64AB918ED966500CCC7BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64ABA18ED966500CCC7BD /* SpringUtilsTests-Info.plist */,
+				CBE64ABB18ED966500CCC7BD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBE64B9718EDC83900CCC7BD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64B9818EDC83900CCC7BD /* Internal */,
+				CBE64B9F18EDC83900CCC7BD /* NSCalendar+Utilities.h */,
+				CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */,
+				CBE64BA118EDC83900CCC7BD /* NSDate+SUInterpolable.h */,
+				CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */,
+				CBE64BA318EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h */,
+				CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */,
+				CBE64BA518EDC83900CCC7BD /* NSObject+KVOBlocks.h */,
+				CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */,
+				CBE64BA718EDC83900CCC7BD /* NSObject+KVOHelpers.h */,
+				CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */,
+				CBE64BA918EDC83900CCC7BD /* NSObject+KVOSelectors.h */,
+				CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */,
+				CBE64BAB18EDC83900CCC7BD /* NSSet+Initialisers.h */,
+				CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */,
+				CBE64BAD18EDC83900CCC7BD /* NSValue+SUInterpolable.h */,
+				CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */,
+				CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		CBE64B9818EDC83900CCC7BD /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64B9918EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h */,
+				CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */,
+				CBE64B9B18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h */,
+				CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */,
+				CBE64B9D18EDC83900CCC7BD /* SUDeallocationCallback.h */,
+				CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		CBE64BB018EDC83900CCC7BD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64BB118EDC83900CCC7BD /* SpringUtils-Classes.h */,
+				CBE64BB218EDC83900CCC7BD /* SUAnimator.h */,
+				CBE64BB318EDC83900CCC7BD /* SUAnimator.m */,
+				CBE64BB418EDC83900CCC7BD /* SUAnimatorDelegate.h */,
+				CBE64BB518EDC83900CCC7BD /* SUClassBuilder.h */,
+				CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */,
+				CBE64BB718EDC83900CCC7BD /* SUMethodBuilder.h */,
+				CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */,
+				CBE64BB918EDC83900CCC7BD /* SUWeakMutableSet.h */,
+				CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CBE64BBB18EDC83900CCC7BD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64BBC18EDC83900CCC7BD /* SUInterpolable.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CBE64BBD18EDC83900CCC7BD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CBE64BBE18EDC83900CCC7BD /* SpringUtils-Utilities.h */,
+				CBE64BBF18EDC83900CCC7BD /* SUAssociatedObjects.h */,
+				CBE64BC018EDC83900CCC7BD /* SUAssociatedWeakObjects.h */,
+				CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */,
+				CBE64BC218EDC83900CCC7BD /* SUBase.h */,
+				CBE64BC318EDC83900CCC7BD /* SUComparatorTools.h */,
+				CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */,
+				CBE64BC518EDC83900CCC7BD /* SURuntimeAssertions.h */,
+				CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */,
+				CBE64BC718EDC83900CCC7BD /* SUSoundTools.h */,
+				CBE64BC818EDC83900CCC7BD /* SUSystemVersion.h */,
+				CBE64BC918EDC83900CCC7BD /* SUTimeFrame.h */,
+				CBE64BCA18EDC83900CCC7BD /* SUTypes.h */,
+				CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */,
+				CBE64BCC18EDC83900CCC7BD /* SUValueInterpolation.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CBE64A9718ED966500CCC7BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64BFF18EDC83900CCC7BD /* NSValue+SUInterpolable.h in Headers */,
+				CBE64C3018EDC83900CCC7BD /* SUTimeFrame.h in Headers */,
+				CBE64BEB18EDC83900CCC7BD /* NSObject+KVOBlocks.h in Headers */,
+				CBE64C2418EDC83900CCC7BD /* SUComparatorTools.h in Headers */,
+				CBE64C1D18EDC83900CCC7BD /* SUAssociatedObjects.h in Headers */,
+				CBE64C3118EDC83900CCC7BD /* SUTypes.h in Headers */,
+				CBE64BF018EDC83900CCC7BD /* NSObject+KVOHelpers.h in Headers */,
+				CBE64BD718EDC83900CCC7BD /* SUDeallocationCallback.h in Headers */,
+				CBE64C1618EDC83900CCC7BD /* SUWeakMutableSet.h in Headers */,
+				CBE64BE618EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h in Headers */,
+				CBE64C1C18EDC83900CCC7BD /* SpringUtils-Utilities.h in Headers */,
+				CBE64C2F18EDC83900CCC7BD /* SUSystemVersion.h in Headers */,
+				CBE64BFA18EDC83900CCC7BD /* NSSet+Initialisers.h in Headers */,
+				CBE64C3718EDC94400CCC7BD /* SpringUtils.h in Headers */,
+				CBE64C2E18EDC83900CCC7BD /* SUSoundTools.h in Headers */,
+				CBE64C2318EDC83900CCC7BD /* SUBase.h in Headers */,
+				CBE64C2918EDC83900CCC7BD /* SURuntimeAssertions.h in Headers */,
+				CBE64C0B18EDC83900CCC7BD /* SUAnimatorDelegate.h in Headers */,
+				CBE64BE118EDC83900CCC7BD /* NSDate+SUInterpolable.h in Headers */,
+				CBE64C1E18EDC83900CCC7BD /* SUAssociatedWeakObjects.h in Headers */,
+				CBE64BD218EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h in Headers */,
+				CBE64C0518EDC83900CCC7BD /* SpringUtils-Classes.h in Headers */,
+				CBE64BDC18EDC83900CCC7BD /* NSCalendar+Utilities.h in Headers */,
+				CBE64C1B18EDC83900CCC7BD /* SUInterpolable.h in Headers */,
+				CBE64C0C18EDC83900CCC7BD /* SUClassBuilder.h in Headers */,
+				CBE64C0418EDC83900CCC7BD /* SpringUtils-Categories.h in Headers */,
+				CBE64C3618EDC83900CCC7BD /* SUValueInterpolation.h in Headers */,
+				CBE64C1118EDC83900CCC7BD /* SUMethodBuilder.h in Headers */,
+				CBE64BF518EDC83900CCC7BD /* NSObject+KVOSelectors.h in Headers */,
+				CBE64BCD18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CBE64A9918ED966500CCC7BD /* SpringUtils-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE64AC218ED966500CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtils-OSX" */;
+			buildPhases = (
+				CBE64A9518ED966500CCC7BD /* Sources */,
+				CBE64A9618ED966500CCC7BD /* Frameworks */,
+				CBE64A9718ED966500CCC7BD /* Headers */,
+				CBE64A9818ED966500CCC7BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpringUtils-OSX";
+			productName = SpringUtils;
+			productReference = CBE64A9A18ED966500CCC7BD /* SpringUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CBE64AB018ED966500CCC7BD /* SpringUtilsTests-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE64AC518ED966500CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtilsTests-OSX" */;
+			buildPhases = (
+				CBE64AAD18ED966500CCC7BD /* Sources */,
+				CBE64AAE18ED966500CCC7BD /* Frameworks */,
+				CBE64AAF18ED966500CCC7BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBE64AB618ED966500CCC7BD /* PBXTargetDependency */,
+			);
+			name = "SpringUtilsTests-OSX";
+			productName = SpringUtilsTests;
+			productReference = CBE64AB118ED966500CCC7BD /* SpringUtilsTests-OSX.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBE64ACB18ED96C800CCC7BD /* SpringUtils-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE64AEA18ED96C900CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtils-iOS" */;
+			buildPhases = (
+				CBE64AC818ED96C800CCC7BD /* Sources */,
+				CBE64AC918ED96C800CCC7BD /* Frameworks */,
+				CBE64ACA18ED96C800CCC7BD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpringUtils-iOS";
+			productName = SpringUtils;
+			productReference = CBE64ACC18ED96C800CCC7BD /* libSpringUtils.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CBE64AD918ED96C800CCC7BD /* SpringUtilsTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE64AED18ED96C900CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtilsTests-iOS" */;
+			buildPhases = (
+				CBE64AD618ED96C800CCC7BD /* Sources */,
+				CBE64AD718ED96C800CCC7BD /* Frameworks */,
+				CBE64AD818ED96C800CCC7BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBE64AE018ED96C800CCC7BD /* PBXTargetDependency */,
+			);
+			name = "SpringUtilsTests-iOS";
+			productName = SpringUtilsTests;
+			productReference = CBE64ADA18ED96C800CCC7BD /* SpringUtilsTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBE64A9118ED966500CCC7BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = SpringsUp;
+				TargetAttributes = {
+					CBE64AB018ED966500CCC7BD = {
+						TestTargetID = CBE64A9918ED966500CCC7BD;
+					};
+					CBE64AD918ED96C800CCC7BD = {
+						TestTargetID = CBE64A9918ED966500CCC7BD;
+					};
+				};
+			};
+			buildConfigurationList = CBE64A9418ED966500CCC7BD /* Build configuration list for PBXProject "SpringUtils" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CBE64A9018ED966500CCC7BD;
+			productRefGroup = CBE64A9B18ED966500CCC7BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBE64A9918ED966500CCC7BD /* SpringUtils-OSX */,
+				CBE64AB018ED966500CCC7BD /* SpringUtilsTests-OSX */,
+				CBE64ACB18ED96C800CCC7BD /* SpringUtils-iOS */,
+				CBE64AD918ED96C800CCC7BD /* SpringUtilsTests-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBE64A9818ED966500CCC7BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AAF18ED966500CCC7BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64ABD18ED966500CCC7BD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AD818ED96C800CCC7BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBE64A9518ED966500CCC7BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64BCE18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
+				CBE64BF618EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */,
+				CBE64BE218EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */,
+				CBE64BD818EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
+				CBE64BD318EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
+				CBE64C2A18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
+				CBE64BEC18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
+				CBE64BE718EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
+				CBE64BF118EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
+				CBE64C1718EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
+				CBE64C0018EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
+				CBE64BDD18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
+				CBE64C1218EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
+				CBE64BFB18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
+				CBE64C1F18EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */,
+				CBE64C0D18EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
+				CBE64C3218EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
+				CBE64C2518EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AAD18ED966500CCC7BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64C3318EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
+				CBE64BED18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
+				CBE64C0118EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
+				CBE64C0818EDC83900CCC7BD /* SUAnimator.m in Sources */,
+				CBE64C1818EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
+				CBE64BF218EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
+				CBE64BDE18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
+				CBE64C2B18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
+				CBE64C1318EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
+				CBE64BE318EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */,
+				CBE64BD418EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
+				CBE64BE818EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
+				CBE64BCF18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
+				CBE64C2618EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
+				CBE64ABF18ED966500CCC7BD /* SpringUtilsTests.m in Sources */,
+				CBE64BFC18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
+				CBE64BD918EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
+				CBE64C0E18EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
+				CBE64C2018EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */,
+				CBE64BF718EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AC818ED96C800CCC7BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64BD018EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
+				CBE64BF818EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */,
+				CBE64BE418EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */,
+				CBE64BDA18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
+				CBE64BD518EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
+				CBE64C2C18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
+				CBE64BEE18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
+				CBE64BE918EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
+				CBE64BF318EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
+				CBE64C1918EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
+				CBE64C0218EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
+				CBE64BDF18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
+				CBE64C1418EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
+				CBE64C0918EDC83900CCC7BD /* SUAnimator.m in Sources */,
+				CBE64BFD18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
+				CBE64C2118EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */,
+				CBE64C0F18EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
+				CBE64C3418EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
+				CBE64C2718EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE64AD618ED96C800CCC7BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE64C3518EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
+				CBE64BEF18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
+				CBE64C0318EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
+				CBE64C0A18EDC83900CCC7BD /* SUAnimator.m in Sources */,
+				CBE64C1A18EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
+				CBE64BF418EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
+				CBE64BE018EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
+				CBE64C2D18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
+				CBE64C1518EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
+				CBE64BE518EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */,
+				CBE64BD618EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
+				CBE64BEA18EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
+				CBE64BD118EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
+				CBE64C2818EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
+				CBE64AF018ED973900CCC7BD /* SpringUtilsTests.m in Sources */,
+				CBE64BFE18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
+				CBE64BDB18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
+				CBE64C1018EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
+				CBE64C2218EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */,
+				CBE64BF918EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBE64AB618ED966500CCC7BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBE64A9918ED966500CCC7BD /* SpringUtils-OSX */;
+			targetProxy = CBE64AB518ED966500CCC7BD /* PBXContainerItemProxy */;
+		};
+		CBE64AE018ED96C800CCC7BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBE64ACB18ED96C800CCC7BD /* SpringUtils-iOS */;
+			targetProxy = CBE64ADF18ED96C800CCC7BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBE64ABB18ED966500CCC7BD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBE64ABC18ED966500CCC7BD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBE64AC018ED966500CCC7BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CBE64AC118ED966500CCC7BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CBE64AC318ED966500CCC7BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "SpringUtils-Info.plist";
+				PRODUCT_NAME = SpringUtils;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		CBE64AC418ED966500CCC7BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "SpringUtils-Info.plist";
+				PRODUCT_NAME = SpringUtils;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		CBE64AC618ED966500CCC7BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringUtils.framework/Versions/A/SpringUtils";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CBE64AC718ED966500CCC7BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringUtils.framework/Versions/A/SpringUtils";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
+				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		CBE64AEB18ED96C900CCC7BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SpringUtils.dst;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SpringUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CBE64AEC18ED96C900CCC7BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SpringUtils.dst;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SpringUtils;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBE64AEE18ED96C900CCC7BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringUtils.framework/Versions/A/SpringUtils";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CBE64AEF18ED96C900CCC7BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringUtils.framework/Versions/A/SpringUtils";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
+				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBE64A9418ED966500CCC7BD /* Build configuration list for PBXProject "SpringUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE64AC018ED966500CCC7BD /* Debug */,
+				CBE64AC118ED966500CCC7BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBE64AC218ED966500CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtils-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE64AC318ED966500CCC7BD /* Debug */,
+				CBE64AC418ED966500CCC7BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBE64AC518ED966500CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtilsTests-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE64AC618ED966500CCC7BD /* Debug */,
+				CBE64AC718ED966500CCC7BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBE64AEA18ED96C900CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtils-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE64AEB18ED96C900CCC7BD /* Debug */,
+				CBE64AEC18ED96C900CCC7BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBE64AED18ED96C900CCC7BD /* Build configuration list for PBXNativeTarget "SpringUtilsTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE64AEE18ED96C900CCC7BD /* Debug */,
+				CBE64AEF18ED96C900CCC7BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBE64A9118ED966500CCC7BD /* Project object */;
+}
