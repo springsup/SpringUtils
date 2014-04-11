@@ -40,14 +40,14 @@ SUSoundEffectData readAudioDataFromFile ( AudioFileID audioFile ) {
     
     propertySz  = sizeof( data->dataFormat );
     err         = AudioFileGetProperty( audioFile, kAudioFilePropertyDataFormat, &propertySz, &data->dataFormat );
-    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData(data); free( data ), NULL )
+    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData( data ), NULL )
     
     // Number of audio bytes
     
     UInt64 byte = 0;
     propertySz  = sizeof( byte );
     err         = AudioFileGetProperty( audioFile, kAudioFilePropertyAudioDataByteCount, &propertySz, &byte );
-    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData(data); free( data ), NULL )
+    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData( data ), NULL )
 
     data->numberOfAudioDataBytes = byte;
     
@@ -55,14 +55,14 @@ SUSoundEffectData readAudioDataFromFile ( AudioFileID audioFile ) {
     
     propertySz  = sizeof( data->maximumPacketSize );
     err         = AudioFileGetProperty( audioFile, kAudioFilePropertyPacketSizeUpperBound, &propertySz, &data->maximumPacketSize );
-    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData(data); free( data ), NULL )
+    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData( data ), NULL )
 
     // Number of audio packets
     
     UInt64 pkts = 0;
     propertySz  = sizeof( pkts );
     err         = AudioFileGetProperty( audioFile, kAudioFilePropertyAudioDataPacketCount, &propertySz, &pkts );
-    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData(data); free( data ), NULL )
+    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData( data ), NULL )
 
     data->numberOfPackets = pkts;
 
@@ -131,7 +131,7 @@ SUSoundEffectData readAudioDataFromFile ( AudioFileID audioFile ) {
 
     // If reading failed, free resources and return NULL.
     
-    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData(data); free( data ), NULL )
+    CHECK_OSSTATUS_FREE_AND_RETURN( err, freeAudioData( data ), NULL )
 
     // Return the read audio data.
 
