@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB509FBE190DC23400E34522 /* SUMethodSignatureBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CB509FBC190DC23400E34522 /* SUMethodSignatureBuilder.h */; };
+		CB509FBF190DC23400E34522 /* SUMethodSignatureBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FBD190DC23400E34522 /* SUMethodSignatureBuilder.m */; };
+		CB509FC1190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */; };
+		CB509FC2190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */; };
+		CBD940F11910986700ECBEBB /* SUMethodSignatureBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FBD190DC23400E34522 /* SUMethodSignatureBuilder.m */; };
 		CBE64A9E18ED966500CCC7BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64A9D18ED966500CCC7BD /* Cocoa.framework */; };
 		CBE64AB318ED966500CCC7BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64AB218ED966500CCC7BD /* XCTest.framework */; };
 		CBE64AB418ED966500CCC7BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64A9D18ED966500CCC7BD /* Cocoa.framework */; };
-		CBE64AB718ED966500CCC7BD /* SpringUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64A9A18ED966500CCC7BD /* SpringUtils.framework */; };
 		CBE64ABD18ED966500CCC7BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBE64ABB18ED966500CCC7BD /* InfoPlist.strings */; };
-		CBE64ABF18ED966500CCC7BD /* SpringUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */; };
 		CBE64ACE18ED96C800CCC7BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACD18ED96C800CCC7BD /* Foundation.framework */; };
 		CBE64ADB18ED96C800CCC7BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64AB218ED966500CCC7BD /* XCTest.framework */; };
 		CBE64ADC18ED96C800CCC7BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACD18ED96C800CCC7BD /* Foundation.framework */; };
 		CBE64ADE18ED96C800CCC7BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ADD18ED96C800CCC7BD /* UIKit.framework */; };
 		CBE64AE118ED96C800CCC7BD /* libSpringUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACC18ED96C800CCC7BD /* libSpringUtils.a */; };
-		CBE64AF018ED973900CCC7BD /* SpringUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */; };
 		CBE64BCD18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9918EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h */; };
 		CBE64BCE18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
 		CBE64BCF18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
@@ -26,9 +28,9 @@
 		CBE64BD118EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
 		CBE64BD218EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9B18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h */; };
 		CBE64BD318EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CBE64BD418EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; };
+		CBE64BD418EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CBE64BD518EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CBE64BD618EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; };
+		CBE64BD618EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CBE64BD718EDC83900CCC7BD /* SUDeallocationCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9D18EDC83900CCC7BD /* SUDeallocationCallback.h */; };
 		CBE64BD818EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
 		CBE64BD918EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
@@ -76,7 +78,6 @@
 		CBE64C0318EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
 		CBE64C0418EDC83900CCC7BD /* SpringUtils-Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C0518EDC83900CCC7BD /* SpringUtils-Classes.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB118EDC83900CCC7BD /* SpringUtils-Classes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBE64C0818EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
 		CBE64C0918EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
 		CBE64C0A18EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
 		CBE64C0B18EDC83900CCC7BD /* SUAnimatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB418EDC83900CCC7BD /* SUAnimatorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -212,6 +213,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB509FBC190DC23400E34522 /* SUMethodSignatureBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUMethodSignatureBuilder.h; sourceTree = "<group>"; };
+		CB509FBD190DC23400E34522 /* SUMethodSignatureBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUMethodSignatureBuilder.m; sourceTree = "<group>"; };
+		CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUMethodSignatureBuilderTests.m; sourceTree = "<group>"; };
+		CB85967719120C7200598D1E /* SUMethodBuilder_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUMethodBuilder_Private.h; sourceTree = "<group>"; };
 		CBE64A9A18ED966500CCC7BD /* SpringUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpringUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE64A9D18ED966500CCC7BD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CBE64AA018ED966500CCC7BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -223,7 +228,6 @@
 		CBE64AB218ED966500CCC7BD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CBE64ABA18ED966500CCC7BD /* SpringUtilsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpringUtilsTests-Info.plist"; sourceTree = "<group>"; };
 		CBE64ABC18ED966500CCC7BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringUtilsTests.m; sourceTree = "<group>"; };
 		CBE64ACC18ED96C800CCC7BD /* libSpringUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpringUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE64ACD18ED96C800CCC7BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBE64ADA18ED96C800CCC7BD /* SpringUtilsTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpringUtilsTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,7 +296,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBE64AB718ED966500CCC7BD /* SpringUtils.framework in Frameworks */,
 				CBE64AB418ED966500CCC7BD /* Cocoa.framework in Frameworks */,
 				CBE64AB318ED966500CCC7BD /* XCTest.framework in Frameworks */,
 			);
@@ -387,7 +390,7 @@
 		CBE64AB818ED966500CCC7BD /* SpringUtilsTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBE64ABE18ED966500CCC7BD /* SpringUtilsTests.m */,
+				CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */,
 				CBE64AB918ED966500CCC7BD /* Supporting Files */,
 			);
 			path = SpringUtilsTests;
@@ -450,7 +453,10 @@
 				CBE64BB518EDC83900CCC7BD /* SUClassBuilder.h */,
 				CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */,
 				CBE64BB718EDC83900CCC7BD /* SUMethodBuilder.h */,
+				CB85967719120C7200598D1E /* SUMethodBuilder_Private.h */,
 				CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */,
+				CB509FBC190DC23400E34522 /* SUMethodSignatureBuilder.h */,
+				CB509FBD190DC23400E34522 /* SUMethodSignatureBuilder.m */,
 				CBE64BB918EDC83900CCC7BD /* SUWeakMutableSet.h */,
 				CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */,
 			);
@@ -502,6 +508,7 @@
 				CBE64C3118EDC83900CCC7BD /* SUTypes.h in Headers */,
 				CBE64BF018EDC83900CCC7BD /* NSObject+KVOHelpers.h in Headers */,
 				CBE64BD718EDC83900CCC7BD /* SUDeallocationCallback.h in Headers */,
+				CB509FBE190DC23400E34522 /* SUMethodSignatureBuilder.h in Headers */,
 				CBE64C1618EDC83900CCC7BD /* SUWeakMutableSet.h in Headers */,
 				CBE64BE618EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h in Headers */,
 				CBE64C1C18EDC83900CCC7BD /* SpringUtils-Utilities.h in Headers */,
@@ -686,6 +693,7 @@
 				CBE64C0D18EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
 				CBE64C3218EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
 				CBE64C2518EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
+				CB509FBF190DC23400E34522 /* SUMethodSignatureBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +704,7 @@
 				CBE64C3318EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
 				CBE64BED18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
 				CBE64C0118EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
-				CBE64C0818EDC83900CCC7BD /* SUAnimator.m in Sources */,
+				CB509FC1190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */,
 				CBE64C1818EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
 				CBE64BF218EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
 				CBE64BDE18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
@@ -707,7 +715,6 @@
 				CBE64BE818EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
 				CBE64BCF18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
 				CBE64C2618EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
-				CBE64ABF18ED966500CCC7BD /* SpringUtilsTests.m in Sources */,
 				CBE64BFC18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
 				CBE64BD918EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
 				CBE64C0E18EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
@@ -727,6 +734,7 @@
 				CBE64BD518EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
 				CBE64C2C18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
 				CBE64BEE18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
+				CBD940F11910986700ECBEBB /* SUMethodSignatureBuilder.m in Sources */,
 				CBE64BE918EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
 				CBE64BF318EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
 				CBE64C1918EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
@@ -749,6 +757,7 @@
 				CBE64C3518EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
 				CBE64BEF18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
 				CBE64C0318EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
+				CB509FC2190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */,
 				CBE64C0A18EDC83900CCC7BD /* SUAnimator.m in Sources */,
 				CBE64C1A18EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
 				CBE64BF418EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
@@ -760,7 +769,6 @@
 				CBE64BEA18EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
 				CBE64BD118EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
 				CBE64C2818EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
-				CBE64AF018ED973900CCC7BD /* SpringUtilsTests.m in Sources */,
 				CBE64BFE18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
 				CBE64BDB18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
 				CBE64C1018EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
@@ -903,8 +911,6 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -925,8 +931,6 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
 				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -966,14 +970,11 @@
 		CBE64AEE18ED96C900CCC7BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringUtils.framework/Versions/A/SpringUtils";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -990,14 +991,11 @@
 		CBE64AEF18ED96C900CCC7BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpringUtils.framework/Versions/A/SpringUtils";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpringUtils/SpringUtils-Prefix.pch";
 				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,38 +9,33 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SUMethodSignatureBuilder.h"
+
 
 /** SUMethodBuilder provides an interface for declaring Objective-C methods at runtime. */
 
-@interface SUMethodBuilder : NSObject
-
-/** @name Retrieving Method details */
+@interface SUMethodBuilder : SUMethodSignatureBuilder
 
 
-/** The selector of the method represented by the receiver. */
-
-@property ( nonatomic, readonly ) SEL selector;
-
-/** The Objective-C encoded type string of the method represented by the receiver.
- *
- *  Unless type information has been set for all arguments in the method's selector, this
- *  property will return `NULL`.
- */
-
-@property ( nonatomic, readonly ) const char * encodedTypes;
-
-/** A function pointer to the implementation of the method represented by the receiver. */
-
-@property ( nonatomic, readonly ) IMP implementation;
-
-
-/** @name Creating a new Method builder */
+//---------------------------------------/
+/** @name Creating a new method builder */
+//---------------------------------------/
 
 
 /** Creates and returns a new SUMethodBuilder instance.
  *
+ *  @param  selector        The selector of the method to build. May not be `NULL`.
+ *  @param  block           A block which provides the method's implementation. May not be `Nil`.
+ *
+ *  @returns                A new SUMethodBuilder instance representing the described method.
+ */
+
++ (instancetype)newMethodWithSelector: (SEL)selector block: (id)block;
+
+/** Creates and returns a new SUMethodBuilder instance.
+ *
  *  @param  selector        The selector of the method the new instance should represent. May not be `NULL`.
- *  @param  returnType      The Objective-C encoded type string of the method's return type. May not be `NULL`.
+ *  @param  returnType      The type encoding of the new method's return type. May not be `NULL`.
  *  @param  block           A block which provides the method's implementation. May not be `Nil`.
  *
  *  @returns                A new SUMethodBuilder instance representing the described method.
@@ -51,7 +46,17 @@
 /** Creates and returns a new SUMethodBuilder instance.
  *
  *  @param  selector        The selector of the method the new instance should represent. May not be `NULL`.
- *  @param  returnType      The Objective-C encoded type string of the method's return type. May not be `NULL`.
+ *  @param  implementation  A function pointer which provides the method's implementation. May not be `NULL`.
+ *
+ *  @returns                A new SUMethodBuilder instance representing the described method.
+ */
+
++ (instancetype)newMethodWithSelector: (SEL)selector implementation: (IMP)implementation;
+
+/** Creates and returns a new SUMethodBuilder instance.
+ *
+ *  @param  selector        The selector of the method the new instance should represent. May not be `NULL`.
+ *  @param  returnType      The type encoding of the new method's return type. May not be `NULL`.
  *  @param  implementation  A function pointer which provides the method's implementation. May not be `NULL`.
  *
  *  @returns                A new SUMethodBuilder instance representing the described method.
@@ -60,17 +65,39 @@
 + (instancetype)newMethodWithSelector: (SEL)selector returnType: (const char *)returnType implementation: (IMP)implementation;
 
 
-/** @name Setting the argument types */
+//--------------------------------/
+/** @name Getting Method Details */
+//--------------------------------/
 
 
-/** Sets the type of the method argument at the given position.
+/** The selector of the method represented by the receiver. */
+
+@property ( nonatomic, readonly ) SEL selector;
+
+/** A function pointer to the implementation of the method represented by the receiver. */
+
+@property ( nonatomic, readonly ) IMP implementation;
+
+
+//--------------------------------------/
+/** @name Getting the Method Signature */
+//--------------------------------------/
+
+
+/** An encoded string of the return- and parameter types of the method represented by the receiver.
  *
- *  @param  encodedType     The Objective-C encoded type string of the argument's type. May not be `NULL`.
- *  @param  argumentIndex   The position of the argument within the receiver's selector.
- *
- *  @returns                The receiver, allowing for calls to be chained.
+ *  Unless type information has been set for all parameters in the method's selector, this
+ *  property will return `NULL`.
  */
 
-- (instancetype)setType: (const char *)encodedType forArgumentAtIndex: (NSUInteger)argumentIndex;
+@property ( nonatomic, readonly ) const char * encodedTypeSignature;
+
+/** The method signature of the method represented by the receiver.
+ *
+ *  Unless type information has been set for all parameters in the method's selector, this
+ *  property will return `Nil`.
+ */
+
+@property ( nonatomic, readonly ) NSMethodSignature * methodSignature;
 
 @end

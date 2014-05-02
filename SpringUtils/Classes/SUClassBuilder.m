@@ -11,24 +11,32 @@
 #import "SUClassBuilder.h"
 
 #import "../Utilities/SURuntimeAssertions.h"
+#import "SUMethodBuilder_Private.h"
 #import <objc/runtime.h>
 
 @interface SUClassBuilder ()
 {
     Class class;
     BOOL  classWasRegistered;
+
+    NSMapTable * _blockBackedInstaceMethodIMPsBySelector;
+    NSMapTable * _blockBasedClassMethodIMPsBySelector;
 }
 @end
 
 @implementation SUClassBuilder
+
+
+#pragma mark -
+#pragma mark Initialization
+
 
 + (instancetype)newClassNamed: (NSString *)className superClass: (Class)superClass {
     
     // Validate parameters
     
     SU_ASSERT_NSSTRING( className );
-    SU_ASSERT_NOT_EQUAL( superClass, Nil );
-    
+
     // Try to create the new Class
     
     Class newClass = objc_allocateClassPair( superClass, [className UTF8String], 0 );
@@ -45,11 +53,33 @@
         // Class created successfully.
         // Return a class builder instance for the new class.
         
-        SUClassBuilder * newClassBuilder    = [[SUClassBuilder alloc] init];
+        SUClassBuilder * newClassBuilder    = [[SUClassBuilder alloc] _init];
         newClassBuilder->class              = newClass;
 
         return newClassBuilder;
     }
+}
+
+- (id)init {
+
+    _SU_THROW_WITH_REASON( @"Invalid Initializer. Use one of the dedicated initializer methods." )
+    __builtin_unreachable();
+}
+
+- (id)_init __attribute__((objc_method_family(init))) {
+
+    self = [super init];
+    if( self )
+    {
+        _blockBackedInstaceMethodIMPsBySelector = [[NSMapTable alloc] initWithKeyOptions: NSPointerFunctionsOpaqueMemory | NSPointerFunctionsOpaquePersonality
+                                                                            valueOptions: NSPointerFunctionsOpaqueMemory | NSPointerFunctionsOpaquePersonality
+                                                                                capacity: 10];
+        _blockBasedClassMethodIMPsBySelector    = [[NSMapTable alloc] initWithKeyOptions: NSPointerFunctionsOpaqueMemory | NSPointerFunctionsOpaquePersonality
+                                                                            valueOptions: NSPointerFunctionsOpaqueMemory | NSPointerFunctionsOpaquePersonality
+                                                                                capacity: 10];
+    }
+
+    return self;
 }
 
 - (void)dealloc {
@@ -60,8 +90,18 @@
         // Dispose of it.
         
         objc_disposeClassPair( class );
+
+        // Release all block-backed IMPs.
+
+        _releaseAllBlockBackedIMPs( _blockBackedInstaceMethodIMPsBySelector );
+        _releaseAllBlockBackedIMPs( _blockBasedClassMethodIMPsBySelector );
     }
 }
+
+
+#pragma mark -
+#pragma mark Class Registration
+
 
 - (Class)registerClass {
     
@@ -74,15 +114,17 @@
     return class;
 }
 
+
 #pragma mark -
 #pragma mark Adding Instance Variables
 
-- (instancetype)addObjectIvar: (NSString *)ivarName {
+
+- (Ivar)addObjectIvar: (NSString *)ivarName {
     
     return [self addIvar: ivarName type: @encode( id )];
 }
 
-- (instancetype)addIvar: (NSString *)ivarName type: (const char *)typeEncoding {
+- (Ivar)addIvar: (NSString *)ivarName type: (const char *)typeEncoding {
 
     // Validate parameters
     
@@ -97,60 +139,124 @@
     
     NSUInteger size, alignment;
     NSGetSizeAndAlignment( typeEncoding, &size, &alignment );
-    class_addIvar( class, [ivarName UTF8String], size, alignment, typeEncoding );
-    
-    return self;
+
+    if( class_addIvar( class, [ivarName UTF8String], size, alignment, typeEncoding ) )
+    {
+        return class_getInstanceVariable( class, [ivarName UTF8String] );
+    }
+
+    return Nil;
 }
+
 
 #pragma mark -
 #pragma mark Adding Instance Methods
 
-- (instancetype)addInstanceMethod: (SUMethodBuilder *)methodBuilder {
-    
-    return [self addInstanceMethod: methodBuilder.selector
-                             types: methodBuilder.encodedTypes
-                    implementation: methodBuilder.implementation];
+
+- (void)addInstanceMethod: (SUMethodBuilder *)methodBuilder {
+
+    // Copy the method builder so that we create a new block-backed IMP for this instance method.
+
+    if( methodBuilder->impCreatedWithBlock )
+    {
+        methodBuilder = [methodBuilder copy];
+    }
+
+    // Add the instance method.
+
+    [self _addInstanceMethod: methodBuilder.selector
+                       types: methodBuilder.encodedTypeSignature
+              implementation: methodBuilder.implementation
+                     isBlock: methodBuilder->impCreatedWithBlock];
+
+    // Inform the method builder copy that we are now managing the IMP-block's lifetime.
+
+    methodBuilder->impHasBeenConsumed = YES;
 }
 
-- (instancetype)addInstanceMethod: (SEL)selector types: (const char *)types block: (id)block {
- 
-    return [self addInstanceMethod: selector
-                             types: types
-                    implementation: imp_implementationWithBlock( block )];
+- (void)addInstanceMethod: (SEL)selector types: (const char *)types block: (id)block {
+
+    [self _addInstanceMethod: selector
+                       types: types
+              implementation: imp_implementationWithBlock( block )
+                     isBlock: YES];
 }
 
-- (instancetype)addInstanceMethod: (SEL)selector types: (const char *)types implementation: (IMP)implementation {
-    
+- (void)addInstanceMethod: (SEL)selector types: (const char *)types implementation: (IMP)implementation {
+
+    [self _addInstanceMethod: selector
+                       types: types
+              implementation: implementation
+                     isBlock: NO];
+}
+
+- (void)_addInstanceMethod: (SEL)selector types: (const char*)types implementation: (IMP)implementation isBlock: (BOOL)isBlock {
+
     // Validate parameters
-    
+
     SU_ASSERT_NOT_EQUAL( selector, NULL );
     SU_ASSERT_NOT_EQUAL( types, NULL );
     SU_ASSERT_NOT_EQUAL( implementation, NULL );
-    
+
     // Add the method
-    
-    class_addMethod( class, selector, implementation, types );
-    return self;
+
+    class_replaceMethod( class, selector, implementation, types );
+
+    // If this instance method was previously mapped to a block-backed IMP, release the old block.
+
+    _releaseBlockBackedIMPForSelector( _blockBackedInstaceMethodIMPsBySelector, selector );
+
+    // If this instance method is mapped to a block-backed IMP, mark it so we can release the block later if neccessary.
+
+    if( isBlock )
+    {
+        _markBlockBackedIMPForSelector( _blockBackedInstaceMethodIMPsBySelector, selector, implementation );
+    }
 }
+
 
 #pragma mark -
 #pragma mark Adding Class Methods
 
-- (instancetype)addClassMethod: (SUMethodBuilder *)methodBuilder {
-    
-    return [self addClassMethod: methodBuilder.selector
-                          types: methodBuilder.encodedTypes
-                 implementation: methodBuilder.implementation];
+
+- (void)addClassMethod: (SUMethodBuilder *)methodBuilder {
+
+    // Copy the method builder so that we create a new block-backed IMP for this instance method.
+
+    if( methodBuilder->impCreatedWithBlock )
+    {
+        methodBuilder = [methodBuilder copy];
+    }
+
+    // Add the class method.
+
+    [self _addClassMethod: methodBuilder.selector
+                    types: methodBuilder.encodedTypeSignature
+           implementation: methodBuilder.implementation
+                  isBlock: methodBuilder->impCreatedWithBlock];
+
+    // Inform the method builder copy that we are now managing the IMP-block's lifetime.
+
+    methodBuilder->impHasBeenConsumed = YES;
 }
 
-- (instancetype)addClassMethod: (SEL)selector types: (const char *)types block: (id)block {
+- (void)addClassMethod: (SEL)selector types: (const char *)types block: (id)block {
 
-    return [self addClassMethod: selector
-                          types: types
-                 implementation: imp_implementationWithBlock( block )];
+    [self _addClassMethod: selector
+                    types: types
+           implementation: imp_implementationWithBlock( block )
+                  isBlock: YES];
 }
 
-- (instancetype)addClassMethod: (SEL)selector types: (const char *)types implementation: (IMP)implementation {
+- (void)addClassMethod: (SEL)selector types: (const char *)types implementation: (IMP)implementation {
+
+    [self _addClassMethod: selector
+                    types: types
+           implementation: implementation
+                  isBlock: NO];
+}
+
+- (void)_addClassMethod: (SEL)selector types: (const char *)types implementation: (IMP)implementation isBlock: (BOOL)isBlock {
 
     // Validate parameters
     
@@ -161,8 +267,51 @@
     // Add the method
     
     Class metaClass = object_getClass( class );
-    class_addMethod( metaClass, selector, implementation, types );
-    return self;
+    class_replaceMethod( metaClass, selector, implementation, types );
+
+    // If this class method was previously mapped to a block-backed IMP, release the old block.
+
+    _releaseBlockBackedIMPForSelector( _blockBasedClassMethodIMPsBySelector, selector );
+
+    // If this class method is mapped to a block-backed IMP, mark it so we can release the block later if neccessary.
+
+    if( isBlock )
+    {
+        _markBlockBackedIMPForSelector( _blockBasedClassMethodIMPsBySelector, selector, implementation );
+    }
+}
+
+
+#pragma mark -
+#pragma mark Block-backed IMP tables
+
+
+static void _releaseBlockBackedIMPForSelector( NSMapTable * selectorImpMap, SEL selector ) {
+
+    IMP blockBackedImp = NSMapGet( selectorImpMap, selector );
+    if( NULL != blockBackedImp )
+    {
+        imp_removeBlock( blockBackedImp );
+        NSMapRemove( selectorImpMap, selector );
+    }
+}
+
+static void _markBlockBackedIMPForSelector( NSMapTable * selectorImpMap, SEL selector, IMP blockBackedImp ) {
+
+    NSMapInsertKnownAbsent( selectorImpMap, selector, blockBackedImp );
+}
+
+static void _releaseAllBlockBackedIMPs( NSMapTable * selectorImpMap ) {
+
+    NSMapEnumerator enumState = NSEnumerateMapTable( selectorImpMap );
+
+    void * _blockBackedImp = NULL;
+    while( NO != NSNextMapEnumeratorPair( &enumState, NULL, &_blockBackedImp ) )
+    {
+        imp_removeBlock( (IMP)_blockBackedImp );
+    }
+
+    NSResetMapTable( selectorImpMap );
 }
 
 @end
