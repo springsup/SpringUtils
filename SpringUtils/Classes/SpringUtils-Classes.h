@@ -14,6 +14,9 @@
 #import "SUWeakMutableSet.h"
 #import "SUClassBuilder.h"
 #import "SUInterceptor.h"
-#import "SUAnimator.h"
+
+#if (TARGET_OS_IPHONE)
+    #import "SUAnimator.h"
+#endif
 
 #endif
