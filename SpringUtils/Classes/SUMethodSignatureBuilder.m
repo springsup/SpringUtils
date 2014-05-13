@@ -130,6 +130,8 @@
 #pragma mark Parameter Information
 
 
+// Getting
+
 - (const char *)typeOfParameterAtIndex: (NSUInteger)parameterIndex {
 
     if( [_parameterIndexes containsIndex: parameterIndex] )
@@ -140,6 +142,22 @@
 
     return NULL;
 }
+
+// Removing
+
+- (void)removeParameterAtIndex: (NSUInteger)parameterIndex {
+
+    [_parameterIndexes removeIndex: parameterIndex];
+    _encodedTypesString = Nil;
+}
+
+- (void)removeAllParameters {
+
+    [_parameterIndexes removeAllIndexes];
+    _encodedTypesString = Nil;
+}
+
+// Setting
 
 - (void)setType: (const char *)encodedParameterType ofParameterAtIndex: (NSUInteger)parameterIndex {
 
@@ -153,86 +171,98 @@
 
 - (void)setType: (const char *)encodedParameterType flags: (SUMethodParameterFlags)parameterFlags ofParameterAtIndex: (NSUInteger)parameterIndex {
 
-    // Validate parameters.
+    // If the type is NULL, remove the parameter at the given index.
 
-    SU_ASSERT_NOT_EQUAL( encodedParameterType, NULL );
-
-    // Get the frame size of the parameter's type.
-
-    NSUInteger parameterSize = 0;
-
-    if( isSmallIntegerType( encodedParameterType ) )
+    if( NULL == encodedParameterType )
     {
-        // Calling convention requires the frame size of all integral types smaller than int (incl. bool)
-        // be rounded up to sizeof( int ).
-
-        parameterSize = MAX( parameterSize, sizeof( int ) );
-    }
-    else if( isArrayType( encodedParameterType ) )
-    {
-        // The frame size of array types is the size of a pointer.
-
-        parameterSize = sizeof( void* );
+        [self removeParameterAtIndex: parameterIndex];
     }
     else
     {
-        // For all other types:
-        //
-        // - Integer types >= int
-        // - Floating-point types
-        // - C Strings (char *)
-        // - Non-packed Structs
-        // - Unions
-        // - Obj-C types (id, Class, SEL)
-        // - Function pointers
-        // - Blocks
-        //
-        // The frame size is equal to the actual size. Call NSGetSizeAndAlignment to get the size.
+        // Get the frame size of the parameter's type.
 
-        NSGetSizeAndAlignment( encodedParameterType, &parameterSize, NULL );
+        NSUInteger parameterSize = 0;
+
+        if( isSmallIntegerType( encodedParameterType ) )
+        {
+            // Calling convention requires the frame size of all integral types smaller than int (incl. bool)
+            // be rounded up to sizeof( int ).
+
+            parameterSize = MAX( parameterSize, sizeof( int ) );
+        }
+        else if( isArrayType( encodedParameterType ) )
+        {
+            // The frame size of array types is the size of a pointer.
+
+            parameterSize = sizeof( void* );
+        }
+        else
+        {
+            // For all other types:
+            //
+            // - Integer types >= int
+            // - Floating-point types
+            // - C Strings (char *)
+            // - Non-packed Structs
+            // - Unions
+            // - Obj-C types (id, Class, SEL)
+            // - Function pointers
+            // - Blocks
+            //
+            // The frame size is equal to the actual size. Call NSGetSizeAndAlignment to get the size.
+
+            NSGetSizeAndAlignment( encodedParameterType, &parameterSize, NULL );
+        }
+
+        // Set the parameter information.
+
+        [self setType: encodedParameterType size: parameterSize flags: parameterFlags ofParameterAtIndex: parameterIndex];
     }
-
-    // Set the parameter information.
-
-    [self setType: encodedParameterType size: parameterSize flags: parameterFlags ofParameterAtIndex: parameterIndex];
 }
 
 - (void)setType: (const char *)encodedType size: (NSUInteger)size flags: (SUMethodParameterFlags)parameterFlags ofParameterAtIndex: (NSUInteger)parameterIndex {
 
-    // Validate parameters.
-
-    SU_ASSERT_NOT_EQUAL( encodedType, NULL );
-    SU_ASSERT_LESS_THAN( parameterIndex, NSNotFound );
-
-    // Get the parameter data.
-
-    SUMethodSignatureParameter * argument = Nil;
-
-    if( parameterIndex < _parameters.count )
+    if( NULL == encodedType )
     {
-        argument = [_parameters pointerAtIndex: parameterIndex];
+        [self removeParameterAtIndex: parameterIndex];
     }
     else
     {
-        [_parameters setCount: ( parameterIndex + 1 )];
-    }
+        // Validate parameters.
 
-    if( Nil == argument )
-    {
-        argument = [[SUMethodSignatureParameter alloc] init];
+        SU_ASSERT_LESS_THAN( parameterIndex, NSNotFound );
+        SU_ASSERT_GREATER_THAN_OR_EQUAL( size, 0 );
 
-        [_parameters replacePointerAtIndex: parameterIndex withPointer: (__bridge void*)argument];
+        // Get the parameter data.
+
+        SUMethodSignatureParameter * argument = Nil;
+
+        if( parameterIndex < _parameters.count )
+        {
+            argument = [_parameters pointerAtIndex: parameterIndex];
+        }
+        else
+        {
+            [_parameters setCount: ( parameterIndex + 1 )];
+        }
+
+        if( Nil == argument )
+        {
+            argument = [[SUMethodSignatureParameter alloc] init];
+            [_parameters replacePointerAtIndex: parameterIndex withPointer: (__bridge void*)argument];
+        }
+
         [_parameterIndexes addIndex: parameterIndex];
+
+        // Update the parameter data.
+
+        argument->encodedType   = GetEncodedType( encodedType, parameterFlags );
+        argument->size          = size;
+
+        // Invalidate the encoded type string
+
+        _encodedTypesString = Nil;
     }
-
-    // Update the parameter data.
-
-    argument->encodedType   = GetEncodedType( encodedType, parameterFlags );
-    argument->size          = size;
-
-    // Invalidate the encoded type string
-
-    _encodedTypesString = Nil;
 }
 
 

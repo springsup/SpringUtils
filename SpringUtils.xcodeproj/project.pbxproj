@@ -7,10 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB509FBE190DC23400E34522 /* SUMethodSignatureBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CB509FBC190DC23400E34522 /* SUMethodSignatureBuilder.h */; };
+		CB509FBE190DC23400E34522 /* SUMethodSignatureBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CB509FBC190DC23400E34522 /* SUMethodSignatureBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB509FBF190DC23400E34522 /* SUMethodSignatureBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FBD190DC23400E34522 /* SUMethodSignatureBuilder.m */; };
 		CB509FC1190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */; };
 		CB509FC2190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */; };
+		CB50B5D219142D79009FA6BA /* SUInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = CB50B5D019142D79009FA6BA /* SUInterceptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB50B5D319142D79009FA6BA /* SUInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5D119142D79009FA6BA /* SUInterceptor.m */; };
+		CB50B5D519142D79009FA6BA /* SUInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5D119142D79009FA6BA /* SUInterceptor.m */; };
+		CB50B5D819143B52009FA6BA /* SUInterceptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5D719143B52009FA6BA /* SUInterceptorTests.m */; };
+		CB50B5D919143B52009FA6BA /* SUInterceptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5D719143B52009FA6BA /* SUInterceptorTests.m */; };
+		CB50B5DA19143D73009FA6BA /* SUMethodSignatureBuilder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB509FBC190DC23400E34522 /* SUMethodSignatureBuilder.h */; };
+		CB50B5DB19143D7C009FA6BA /* SUInterceptor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB50B5D019142D79009FA6BA /* SUInterceptor.h */; };
+		CB50B5DE19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = CB50B5DC19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB50B5DF19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5DD19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m */; };
+		CB50B5E019147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5DD19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m */; };
+		CB50B5E11914963C009FA6BA /* NSMapTable+GenericPointerFunctions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB50B5DC19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.h */; };
+		CB50B5E419160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h in Headers */ = {isa = PBXBuildFile; fileRef = CB50B5E219160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB50B5E519160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5E319160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m */; };
+		CB50B5E619160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50B5E319160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m */; };
+		CB50B5E719161099009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CB50B5E219160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h */; };
 		CBD940F11910986700ECBEBB /* SUMethodSignatureBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CB509FBD190DC23400E34522 /* SUMethodSignatureBuilder.m */; };
 		CBE64A9E18ED966500CCC7BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64A9D18ED966500CCC7BD /* Cocoa.framework */; };
 		CBE64AB318ED966500CCC7BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64AB218ED966500CCC7BD /* XCTest.framework */; };
@@ -20,109 +35,71 @@
 		CBE64ADB18ED96C800CCC7BD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64AB218ED966500CCC7BD /* XCTest.framework */; };
 		CBE64ADC18ED96C800CCC7BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACD18ED96C800CCC7BD /* Foundation.framework */; };
 		CBE64ADE18ED96C800CCC7BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ADD18ED96C800CCC7BD /* UIKit.framework */; };
-		CBE64AE118ED96C800CCC7BD /* libSpringUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE64ACC18ED96C800CCC7BD /* libSpringUtils.a */; };
 		CBE64BCD18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9918EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.h */; };
 		CBE64BCE18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
-		CBE64BCF18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
 		CBE64BD018EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
-		CBE64BD118EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9A18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m */; };
 		CBE64BD218EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9B18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h */; };
 		CBE64BD318EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CBE64BD418EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CBE64BD518EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CBE64BD618EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9C18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CBE64BD718EDC83900CCC7BD /* SUDeallocationCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9D18EDC83900CCC7BD /* SUDeallocationCallback.h */; };
 		CBE64BD818EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
-		CBE64BD918EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
 		CBE64BDA18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
-		CBE64BDB18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64B9E18EDC83900CCC7BD /* SUDeallocationCallback.m */; };
 		CBE64BDC18EDC83900CCC7BD /* NSCalendar+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64B9F18EDC83900CCC7BD /* NSCalendar+Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64BDD18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
-		CBE64BDE18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
 		CBE64BDF18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
-		CBE64BE018EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */; };
 		CBE64BE118EDC83900CCC7BD /* NSDate+SUInterpolable.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA118EDC83900CCC7BD /* NSDate+SUInterpolable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64BE218EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
-		CBE64BE318EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
 		CBE64BE418EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
-		CBE64BE518EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA218EDC83900CCC7BD /* NSDate+SUInterpolable.m */; };
 		CBE64BE618EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA318EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64BE718EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
-		CBE64BE818EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
 		CBE64BE918EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
-		CBE64BEA18EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA418EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m */; };
 		CBE64BEB18EDC83900CCC7BD /* NSObject+KVOBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA518EDC83900CCC7BD /* NSObject+KVOBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64BEC18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
-		CBE64BED18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
 		CBE64BEE18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
-		CBE64BEF18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA618EDC83900CCC7BD /* NSObject+KVOBlocks.m */; };
 		CBE64BF018EDC83900CCC7BD /* NSObject+KVOHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA718EDC83900CCC7BD /* NSObject+KVOHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64BF118EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
-		CBE64BF218EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
 		CBE64BF318EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
-		CBE64BF418EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BA818EDC83900CCC7BD /* NSObject+KVOHelpers.m */; };
 		CBE64BF518EDC83900CCC7BD /* NSObject+KVOSelectors.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BA918EDC83900CCC7BD /* NSObject+KVOSelectors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64BF618EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
-		CBE64BF718EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
 		CBE64BF818EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
-		CBE64BF918EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAA18EDC83900CCC7BD /* NSObject+KVOSelectors.m */; };
 		CBE64BFA18EDC83900CCC7BD /* NSSet+Initialisers.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BAB18EDC83900CCC7BD /* NSSet+Initialisers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64BFB18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
-		CBE64BFC18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
 		CBE64BFD18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
-		CBE64BFE18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */; };
 		CBE64BFF18EDC83900CCC7BD /* NSValue+SUInterpolable.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BAD18EDC83900CCC7BD /* NSValue+SUInterpolable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C0018EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
-		CBE64C0118EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
 		CBE64C0218EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
-		CBE64C0318EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */; };
 		CBE64C0418EDC83900CCC7BD /* SpringUtils-Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C0518EDC83900CCC7BD /* SpringUtils-Classes.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB118EDC83900CCC7BD /* SpringUtils-Classes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C0918EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
-		CBE64C0A18EDC83900CCC7BD /* SUAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB318EDC83900CCC7BD /* SUAnimator.m */; };
 		CBE64C0B18EDC83900CCC7BD /* SUAnimatorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB418EDC83900CCC7BD /* SUAnimatorDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C0C18EDC83900CCC7BD /* SUClassBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB518EDC83900CCC7BD /* SUClassBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C0D18EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
-		CBE64C0E18EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
 		CBE64C0F18EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
-		CBE64C1018EDC83900CCC7BD /* SUClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */; };
 		CBE64C1118EDC83900CCC7BD /* SUMethodBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB718EDC83900CCC7BD /* SUMethodBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C1218EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
-		CBE64C1318EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
 		CBE64C1418EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
-		CBE64C1518EDC83900CCC7BD /* SUMethodBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BB818EDC83900CCC7BD /* SUMethodBuilder.m */; };
 		CBE64C1618EDC83900CCC7BD /* SUWeakMutableSet.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BB918EDC83900CCC7BD /* SUWeakMutableSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C1718EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
-		CBE64C1818EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
 		CBE64C1918EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
-		CBE64C1A18EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BBA18EDC83900CCC7BD /* SUWeakMutableSet.m */; };
 		CBE64C1B18EDC83900CCC7BD /* SUInterpolable.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BBC18EDC83900CCC7BD /* SUInterpolable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C1C18EDC83900CCC7BD /* SpringUtils-Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BBE18EDC83900CCC7BD /* SpringUtils-Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C1D18EDC83900CCC7BD /* SUAssociatedObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BBF18EDC83900CCC7BD /* SUAssociatedObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C1E18EDC83900CCC7BD /* SUAssociatedWeakObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC018EDC83900CCC7BD /* SUAssociatedWeakObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C1F18EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
-		CBE64C2018EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
 		CBE64C2118EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
-		CBE64C2218EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC118EDC83900CCC7BD /* SUAssociatedWeakObjects.m */; };
 		CBE64C2318EDC83900CCC7BD /* SUBase.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC218EDC83900CCC7BD /* SUBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C2418EDC83900CCC7BD /* SUComparatorTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC318EDC83900CCC7BD /* SUComparatorTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C2518EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
-		CBE64C2618EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
 		CBE64C2718EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
-		CBE64C2818EDC83900CCC7BD /* SUComparatorTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC418EDC83900CCC7BD /* SUComparatorTools.m */; };
 		CBE64C2918EDC83900CCC7BD /* SURuntimeAssertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC518EDC83900CCC7BD /* SURuntimeAssertions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C2A18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
-		CBE64C2B18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
 		CBE64C2C18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
-		CBE64C2D18EDC83900CCC7BD /* SUSoundTools.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BC618EDC83900CCC7BD /* SUSoundTools.c */; };
 		CBE64C2E18EDC83900CCC7BD /* SUSoundTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC718EDC83900CCC7BD /* SUSoundTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C2F18EDC83900CCC7BD /* SUSystemVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC818EDC83900CCC7BD /* SUSystemVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C3018EDC83900CCC7BD /* SUTimeFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BC918EDC83900CCC7BD /* SUTimeFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C3118EDC83900CCC7BD /* SUTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BCA18EDC83900CCC7BD /* SUTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C3218EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
-		CBE64C3318EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
 		CBE64C3418EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
-		CBE64C3518EDC83900CCC7BD /* SUValueInterpolation.c in Sources */ = {isa = PBXBuildFile; fileRef = CBE64BCB18EDC83900CCC7BD /* SUValueInterpolation.c */; };
 		CBE64C3618EDC83900CCC7BD /* SUValueInterpolation.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64BCC18EDC83900CCC7BD /* SUValueInterpolation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C3718EDC94400CCC7BD /* SpringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = CBE64AAA18ED966500CCC7BD /* SpringUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE64C5518EDCAD900CCC7BD /* SpringUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBE64AAA18ED966500CCC7BD /* SpringUtils.h */; };
@@ -188,13 +165,17 @@
 				CBE64C5B18EDCAD900CCC7BD /* NSObject+KVOSelectors.h in CopyFiles */,
 				CBE64C5C18EDCAD900CCC7BD /* NSSet+Initialisers.h in CopyFiles */,
 				CBE64C5D18EDCAD900CCC7BD /* NSValue+SUInterpolable.h in CopyFiles */,
+				CB50B5E719161099009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h in CopyFiles */,
 				CBE64C5E18EDCAD900CCC7BD /* SpringUtils-Categories.h in CopyFiles */,
 				CBE64C5F18EDCAD900CCC7BD /* SpringUtils-Classes.h in CopyFiles */,
 				CBE64C6018EDCAD900CCC7BD /* SUAnimator.h in CopyFiles */,
 				CBE64C6118EDCAD900CCC7BD /* SUAnimatorDelegate.h in CopyFiles */,
 				CBE64C6218EDCAD900CCC7BD /* SUClassBuilder.h in CopyFiles */,
 				CBE64C6318EDCAD900CCC7BD /* SUMethodBuilder.h in CopyFiles */,
+				CB50B5DA19143D73009FA6BA /* SUMethodSignatureBuilder.h in CopyFiles */,
+				CB50B5DB19143D7C009FA6BA /* SUInterceptor.h in CopyFiles */,
 				CBE64C6418EDCAD900CCC7BD /* SUWeakMutableSet.h in CopyFiles */,
+				CB50B5E11914963C009FA6BA /* NSMapTable+GenericPointerFunctions.h in CopyFiles */,
 				CBE64C6518EDCAD900CCC7BD /* SUInterpolable.h in CopyFiles */,
 				CBE64C6618EDCAD900CCC7BD /* SpringUtils-Utilities.h in CopyFiles */,
 				CBE64C6718EDCAD900CCC7BD /* SUAssociatedObjects.h in CopyFiles */,
@@ -216,6 +197,13 @@
 		CB509FBC190DC23400E34522 /* SUMethodSignatureBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUMethodSignatureBuilder.h; sourceTree = "<group>"; };
 		CB509FBD190DC23400E34522 /* SUMethodSignatureBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUMethodSignatureBuilder.m; sourceTree = "<group>"; };
 		CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUMethodSignatureBuilderTests.m; sourceTree = "<group>"; };
+		CB50B5D019142D79009FA6BA /* SUInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUInterceptor.h; sourceTree = "<group>"; };
+		CB50B5D119142D79009FA6BA /* SUInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUInterceptor.m; sourceTree = "<group>"; };
+		CB50B5D719143B52009FA6BA /* SUInterceptorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUInterceptorTests.m; sourceTree = "<group>"; };
+		CB50B5DC19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMapTable+GenericPointerFunctions.h"; sourceTree = "<group>"; };
+		CB50B5DD19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMapTable+GenericPointerFunctions.m"; sourceTree = "<group>"; };
+		CB50B5E219160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+ProtocolMethodSignatures.h"; sourceTree = "<group>"; };
+		CB50B5E319160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+ProtocolMethodSignatures.m"; sourceTree = "<group>"; };
 		CB85967719120C7200598D1E /* SUMethodBuilder_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUMethodBuilder_Private.h; sourceTree = "<group>"; };
 		CBE64A9A18ED966500CCC7BD /* SpringUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpringUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE64A9D18ED966500CCC7BD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -315,7 +303,6 @@
 			files = (
 				CBE64ADB18ED96C800CCC7BD /* XCTest.framework in Frameworks */,
 				CBE64ADE18ED96C800CCC7BD /* UIKit.framework in Frameworks */,
-				CBE64AE118ED96C800CCC7BD /* libSpringUtils.a in Frameworks */,
 				CBE64ADC18ED96C800CCC7BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				CB509FC0190E004700E34522 /* SUMethodSignatureBuilderTests.m */,
+				CB50B5D719143B52009FA6BA /* SUInterceptorTests.m */,
 				CBE64AB918ED966500CCC7BD /* Supporting Files */,
 			);
 			path = SpringUtilsTests;
@@ -408,6 +396,7 @@
 		CBE64B9718EDC83900CCC7BD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */,
 				CBE64B9818EDC83900CCC7BD /* Internal */,
 				CBE64B9F18EDC83900CCC7BD /* NSCalendar+Utilities.h */,
 				CBE64BA018EDC83900CCC7BD /* NSCalendar+Utilities.m */,
@@ -425,7 +414,10 @@
 				CBE64BAC18EDC83900CCC7BD /* NSSet+Initialisers.m */,
 				CBE64BAD18EDC83900CCC7BD /* NSValue+SUInterpolable.h */,
 				CBE64BAE18EDC83900CCC7BD /* NSValue+SUInterpolable.m */,
-				CBE64BAF18EDC83900CCC7BD /* SpringUtils-Categories.h */,
+				CB50B5DC19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.h */,
+				CB50B5DD19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m */,
+				CB50B5E219160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h */,
+				CB50B5E319160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -450,6 +442,8 @@
 				CBE64BB218EDC83900CCC7BD /* SUAnimator.h */,
 				CBE64BB318EDC83900CCC7BD /* SUAnimator.m */,
 				CBE64BB418EDC83900CCC7BD /* SUAnimatorDelegate.h */,
+				CB50B5D019142D79009FA6BA /* SUInterceptor.h */,
+				CB50B5D119142D79009FA6BA /* SUInterceptor.m */,
 				CBE64BB518EDC83900CCC7BD /* SUClassBuilder.h */,
 				CBE64BB618EDC83900CCC7BD /* SUClassBuilder.m */,
 				CBE64BB718EDC83900CCC7BD /* SUMethodBuilder.h */,
@@ -508,7 +502,6 @@
 				CBE64C3118EDC83900CCC7BD /* SUTypes.h in Headers */,
 				CBE64BF018EDC83900CCC7BD /* NSObject+KVOHelpers.h in Headers */,
 				CBE64BD718EDC83900CCC7BD /* SUDeallocationCallback.h in Headers */,
-				CB509FBE190DC23400E34522 /* SUMethodSignatureBuilder.h in Headers */,
 				CBE64C1618EDC83900CCC7BD /* SUWeakMutableSet.h in Headers */,
 				CBE64BE618EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.h in Headers */,
 				CBE64C1C18EDC83900CCC7BD /* SpringUtils-Utilities.h in Headers */,
@@ -524,9 +517,13 @@
 				CBE64BD218EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.h in Headers */,
 				CBE64C0518EDC83900CCC7BD /* SpringUtils-Classes.h in Headers */,
 				CBE64BDC18EDC83900CCC7BD /* NSCalendar+Utilities.h in Headers */,
+				CB50B5E419160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.h in Headers */,
+				CB509FBE190DC23400E34522 /* SUMethodSignatureBuilder.h in Headers */,
+				CB50B5DE19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.h in Headers */,
 				CBE64C1B18EDC83900CCC7BD /* SUInterpolable.h in Headers */,
 				CBE64C0C18EDC83900CCC7BD /* SUClassBuilder.h in Headers */,
 				CBE64C0418EDC83900CCC7BD /* SpringUtils-Categories.h in Headers */,
+				CB50B5D219142D79009FA6BA /* SUInterceptor.h in Headers */,
 				CBE64C3618EDC83900CCC7BD /* SUValueInterpolation.h in Headers */,
 				CBE64C1118EDC83900CCC7BD /* SUMethodBuilder.h in Headers */,
 				CBE64BF518EDC83900CCC7BD /* NSObject+KVOSelectors.h in Headers */,
@@ -675,11 +672,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB50B5DF19147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m in Sources */,
 				CBE64BCE18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
 				CBE64BF618EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */,
 				CBE64BE218EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */,
 				CBE64BD818EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
 				CBE64BD318EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
+				CB50B5D319142D79009FA6BA /* SUInterceptor.m in Sources */,
 				CBE64C2A18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
 				CBE64BEC18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
 				CBE64BE718EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
@@ -689,6 +688,7 @@
 				CBE64BDD18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
 				CBE64C1218EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
 				CBE64BFB18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
+				CB50B5E519160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m in Sources */,
 				CBE64C1F18EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */,
 				CBE64C0D18EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
 				CBE64C3218EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
@@ -701,25 +701,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBE64C3318EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
-				CBE64BED18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
-				CBE64C0118EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
+				CB50B5D819143B52009FA6BA /* SUInterceptorTests.m in Sources */,
 				CB509FC1190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */,
-				CBE64C1818EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
-				CBE64BF218EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
-				CBE64BDE18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
-				CBE64C2B18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
-				CBE64C1318EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
-				CBE64BE318EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */,
-				CBE64BD418EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
-				CBE64BE818EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
-				CBE64BCF18EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
-				CBE64C2618EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
-				CBE64BFC18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
-				CBE64BD918EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
-				CBE64C0E18EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
-				CBE64C2018EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */,
-				CBE64BF718EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,10 +719,13 @@
 				CBE64BEE18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
 				CBD940F11910986700ECBEBB /* SUMethodSignatureBuilder.m in Sources */,
 				CBE64BE918EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
+				CB50B5D519142D79009FA6BA /* SUInterceptor.m in Sources */,
 				CBE64BF318EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
 				CBE64C1918EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
 				CBE64C0218EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
 				CBE64BDF18EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
+				CB50B5E019147F2F009FA6BA /* NSMapTable+GenericPointerFunctions.m in Sources */,
+				CB50B5E619160E80009FA6BA /* NSMethodSignature+ProtocolMethodSignatures.m in Sources */,
 				CBE64C1418EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
 				CBE64C0918EDC83900CCC7BD /* SUAnimator.m in Sources */,
 				CBE64BFD18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
@@ -754,26 +740,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBE64C3518EDC83900CCC7BD /* SUValueInterpolation.c in Sources */,
-				CBE64BEF18EDC83900CCC7BD /* NSObject+KVOBlocks.m in Sources */,
-				CBE64C0318EDC83900CCC7BD /* NSValue+SUInterpolable.m in Sources */,
 				CB509FC2190E004700E34522 /* SUMethodSignatureBuilderTests.m in Sources */,
-				CBE64C0A18EDC83900CCC7BD /* SUAnimator.m in Sources */,
-				CBE64C1A18EDC83900CCC7BD /* SUWeakMutableSet.m in Sources */,
-				CBE64BF418EDC83900CCC7BD /* NSObject+KVOHelpers.m in Sources */,
-				CBE64BE018EDC83900CCC7BD /* NSCalendar+Utilities.m in Sources */,
-				CBE64C2D18EDC83900CCC7BD /* SUSoundTools.c in Sources */,
-				CBE64C1518EDC83900CCC7BD /* SUMethodBuilder.m in Sources */,
-				CBE64BE518EDC83900CCC7BD /* NSDate+SUInterpolable.m in Sources */,
-				CBE64BD618EDC83900CCC7BD /* NSObject+SUDeallocationNotifier_Internal.m in Sources */,
-				CBE64BEA18EDC83900CCC7BD /* NSDateComponents+NSCalendarUnitSubscripting.m in Sources */,
-				CBE64BD118EDC83900CCC7BD /* NSObject+SUDeallocationNotifier.m in Sources */,
-				CBE64C2818EDC83900CCC7BD /* SUComparatorTools.m in Sources */,
-				CBE64BFE18EDC83900CCC7BD /* NSSet+Initialisers.m in Sources */,
-				CBE64BDB18EDC83900CCC7BD /* SUDeallocationCallback.m in Sources */,
-				CBE64C1018EDC83900CCC7BD /* SUClassBuilder.m in Sources */,
-				CBE64C2218EDC83900CCC7BD /* SUAssociatedWeakObjects.m in Sources */,
-				CBE64BF918EDC83900CCC7BD /* NSObject+KVOSelectors.m in Sources */,
+				CB50B5D919143B52009FA6BA /* SUInterceptorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,10 +782,12 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -853,10 +823,12 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -970,6 +942,7 @@
 		CBE64AEE18ED96C900CCC7BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libSpringUtils.a";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -981,6 +954,12 @@
 				);
 				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -991,6 +970,7 @@
 		CBE64AEF18ED96C900CCC7BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libSpringUtils.a";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -998,6 +978,12 @@
 				);
 				INFOPLIST_FILE = "SpringUtilsTests/SpringUtilsTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";

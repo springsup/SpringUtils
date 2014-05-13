@@ -13,6 +13,7 @@
 
 #import "SUWeakMutableSet.h"
 #import "SUClassBuilder.h"
+#import "SUInterceptor.h"
 #import "SUAnimator.h"
 
 #endif

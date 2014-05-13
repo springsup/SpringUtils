@@ -2,8 +2,10 @@
 //  SUMethodSignatureBuilderTests.m
 //  SpringUtils
 //
-//  Created by Karl Wagner on 28/04/2014.
-//  Copyright (c) 2014 SpringsUp. All rights reserved.
+//  (c) 2014-present, SpringsUp
+//
+//  Licensed under the SpringUtils license, which may be obtained from:
+//  https://raw.github.com/springsup/SpringUtils/master/LICENSE
 //
 
 #import <XCTest/XCTest.h>
@@ -11,9 +13,10 @@
 #import <objc/runtime.h>
 
 struct TestStruct {
-    UInt32 field1;
-    UInt16 field2;
-    UInt8  field3;
+    UInt64 field1;
+    UInt64 field2;
+    UInt16 field3;
+    UInt8  field4;
 };
 
 union TestUnion {
@@ -132,20 +135,32 @@ struct TestBitField {
 
 // Multiple Arguments
 
-- (Class)classReturnConstCStrArg: (const char *)arg1 objectArg: (id)arg2
-    { return self.class; }
+- (Class)classReturnConstCStrArg: (const char *)arg1
+                       objectArg: (id)arg2 { return self.class; }
 
-- (struct TestLittleStruct)littleStructReturnBoolArg: (_Bool)arg1 SELArg: (SEL)arg2
-    { struct TestLittleStruct a; return a; }
+- (struct TestLittleStruct)littleStructReturnBoolArg: (_Bool)arg1
+                                              SELArg: (SEL)arg2 { struct TestLittleStruct a; return a; }
 
-- (union TestUnion)unionReturnCharArg: (char)arg1 uShortArg: (unsigned short)arg2 doubleArg: (double)arg3
-    { union TestUnion a; return a; }
+- (union TestUnion)unionReturnCharArg: (char)arg1
+                            uShortArg: (unsigned short)arg2
+                            doubleArg: (double)arg3 { union TestUnion a; return a; }
 
-- (void **)voidPtrPtrReturnFixedSizeArrayArg: (__strong id[10])arg1 blockArg: (void(^)(BOOL)) arg2
-    { return NULL; }
+- (void **)voidPtrPtrReturnFixedSizeArrayArg: (__strong id[10])arg1
+                                    blockArg: (void(^)(BOOL)) arg2 { return NULL; }
 
 - (id)objectReturnDoubleArg: (double)arg1 doubleArg: (double)arg2 boolArg: (_Bool)arg3 pointerArg: (int*)arg4
     { return Nil; }
+
+- (void)noReturnDoubleArg: (double)arg1
+                structArg: (struct TestStruct)arg2
+              longLongArg: (long long)arg3
+                 shortArg: (short)arg4
+                structArg: (struct TestStruct)arg5
+                objectArg: (id)arg6
+                  boolArg: (_Bool)arg7
+             constCStrArg: (const char *)arg8
+                 unionArg: (union TestUnion)arg9
+                 classArg: (Class)arg10 { }
 
 // Packed Structures
 
@@ -225,7 +240,7 @@ struct TestBitField {
     Method actualMethod            = class_getInstanceMethod( TestMethodDeclaratations.class, testMethodSelector );
     const char * actualSignature   = method_getTypeEncoding( actualMethod );
 
-    NSLog( @"***************   %s", generatedTypeEncoding );
+//    NSLog( @"***************   %s", generatedTypeEncoding );
 
     BOOL equalEncodings = ( 0 == strcmp( generatedTypeEncoding, actualSignature ) );
     XCTAssert( equalEncodings,
@@ -353,6 +368,12 @@ GENERATE_TEST_WITH_PARAMS( testVoidPtrPtrReturn_FixedSizeArrayArg_BlockArg,     
                            @encode( void** ), @encode( id[10] ), @encode( void(^)(BOOL) ) )
 GENERATE_TEST_WITH_PARAMS( testObjectReturn_DoubleArg_DoubleArg_BoolArg_PoinerArg, _signatureBuilder, @selector( objectReturnDoubleArg:doubleArg:boolArg:pointerArg: ),
                            @encode( id ), @encode( double ), @encode( double ), @encode( _Bool ), @encode( int* ) )
+
+GENERATE_TEST_WITH_PARAMS( testNoReturn_DoubleArg_StructArg_LongLongArg_ShortArg_StructArg_ObjectArg_BoolArg_ConstCStrArg_UnionArg_ClassArg,
+                           _signatureBuilder,
+                           @selector( noReturnDoubleArg:structArg:longLongArg:shortArg:structArg:objectArg:boolArg:constCStrArg:unionArg:classArg: ),
+                           @encode( void ),
+                           @encode( double ), @encode( struct TestStruct ), @encode( long long ), @encode( short ), @encode( struct TestStruct ), @encode( id ), @encode( _Bool ), @encode( const char* ), @encode( union TestUnion ), @encode( Class ) )
 
 #pragma mark -
 #pragma mark Packed Structures

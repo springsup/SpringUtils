@@ -57,7 +57,18 @@ typedef NS_OPTIONS( NSUInteger, SUMethodParameterFlags ){
 };
 
 
-/** SUMethodSignatureBuilder provides an interface for building method signatures at runtime. */
+/** SUMethodSignatureBuilder provides an interface for building method signatures at runtime.
+ *
+ *  Parameter indexes referenced by this class do not include the implicit 'self' or '_cmd' method parameters. They refer
+ *  to the position of the parameter within a method's selector.
+ *
+ *  SUMethodSignature allows you to explicitly set the size of parameter types when creating method signatures. The size
+ *  refers to the argframe size of the parameter's type, which for some types is not the same as their actual memory size.
+ *  This makes it important that you don't explicitly set the size of the parameter type unless it really is neccessary (i.e. bitfields and packed structs).
+ *
+ *  For bitfields and packed structs, the argFrame size actually *is* the memory size of the type;
+ *  so provide the parameter type's size using sizeof( MyPackedStruct ) or sizeof( MyBitfield ).
+ */
 
 @interface SUMethodSignatureBuilder : NSObject< NSCopying >
 
@@ -122,7 +133,11 @@ typedef NS_OPTIONS( NSUInteger, SUMethodParameterFlags ){
 
 /** Sets the type of the method parameter at the given position.
  *
- *  @param  encodedType     The type encoding of the parameter at the given index. May not be `NULL`.
+ *  *Warning*:  Structs defined with __attribute__((packed)) and bitfields are not valid types for this method.
+ *              Parameters with these data types must be set with an explicit size.
+ *
+ *  @param  encodedType     The type encoding of the parameter at the given index.
+ *                          If NULL, the parameter at the given index will be removed from the method signature, if it exists.
  *  @param  parameterIndex  The position of the parameter within the receiver's selector.
  */
 
@@ -130,16 +145,11 @@ typedef NS_OPTIONS( NSUInteger, SUMethodParameterFlags ){
 
 /** Sets the type of the method parameter at the given position.
  *
- *  @param  encodedType     The type encoding of the parameter at the given index. May not be `NULL`.
- *  @param  parameterSize   The frame size of the parameter.
- *  @param  parameterIndex  The position of the parameter within the receiver's selector.
- */
-
-- (void)setType: (const char *)encodedType size: (NSUInteger)parameterSize ofParameterAtIndex: (NSUInteger)parameterIndex;
-
-/** Sets the type of the method parameter at the given position.
+ *  *Warning*:  Structs defined with __attribute__((packed)) and bitfields are not valid types for this method.
+ *              Parameters with these data types must be set with an explicit size.
  *
- *  @param  encodedType     The type encoding of the parameter at the given index. May not be `NULL`.
+ *  @param  encodedType     The type encoding of the parameter at the given index.
+ *                          If NULL, the parameter at the given index will be removed from the method signature, if it exists.
  *  @param  flags           A mask of qualifiers for the parameter.
  *  @param  parameterIndex  The position of the parameter within the receiver's selector.
  */
@@ -148,12 +158,41 @@ typedef NS_OPTIONS( NSUInteger, SUMethodParameterFlags ){
 
 /** Sets the type of the method parameter at the given position.
  *
- *  @param  encodedType     The type encoding of the parameter at the given index. May not be `NULL`.
+ *  @param  encodedType     The type encoding of the parameter at the given index.
+ *                          If NULL, the parameter at the given index will be removed from the method signature, if it exists.
+ *  @param  parameterSize   The frame size of the parameter.
+ *  @param  parameterIndex  The position of the parameter within the receiver's selector.
+ */
+
+- (void)setType: (const char *)encodedType size: (NSUInteger)parameterSize ofParameterAtIndex: (NSUInteger)parameterIndex;
+
+/** Sets the type of the method parameter at the given position.
+ *
+ *  @param  encodedType     The type encoding of the parameter at the given index.
+ *                          If NULL, the parameter at the given index will be removed from the method signature, if it exists.
  *  @param  parameterSize   The frame size of the parameter.
  *  @param  flags           A mask of qualifiers for the parameter.
  *  @param  parameterIndex  The position of the parameter within the receiver's selector.
  */
 
-- (void)setType: (const char *)encodedType size: (NSUInteger)siparameterSize flags: (SUMethodParameterFlags)parameterFlags ofParameterAtIndex: (NSUInteger)parameterIndex;
+- (void)setType: (const char *)encodedType size: (NSUInteger)parameterSize flags: (SUMethodParameterFlags)parameterFlags ofParameterAtIndex: (NSUInteger)parameterIndex;
+
+
+//-----------------------------/
+/** @name Removing Parameters */
+//-----------------------------/
+
+
+/** Removes the declared parameter at the given position.
+ *
+ *  @param  parameterIndex  The position of the parameter within the receiver's selector.
+ */
+
+- (void)removeParameterAtIndex: (NSUInteger)parameterIndex;
+
+/** Removes all declared parameters from the receiver's method signature. */
+
+- (void)removeAllParameters;
+
 
 @end

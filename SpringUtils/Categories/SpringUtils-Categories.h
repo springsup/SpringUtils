@@ -22,5 +22,8 @@
 #import "NSDateComponents+NSCalendarUnitSubscripting.h"
 
 #import "NSSet+Initialisers.h"
+#import "NSMapTable+GenericPointerFunctions.h"
+
+#import "NSMethodSignature+ProtocolMethodSignatures.h"
 
 #endif

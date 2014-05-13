@@ -11,6 +11,7 @@
 #import "SUClassBuilder.h"
 
 #import "../Utilities/SURuntimeAssertions.h"
+#import "../Categories/NSMapTable+GenericPointerFunctions.h"
 #import "SUMethodBuilder_Private.h"
 #import <objc/runtime.h>
 
@@ -288,30 +289,30 @@
 
 static void _releaseBlockBackedIMPForSelector( NSMapTable * selectorImpMap, SEL selector ) {
 
-    IMP blockBackedImp = NSMapGet( selectorImpMap, selector );
+    IMP blockBackedImp = [selectorImpMap pointerForPointerKey: selector];
     if( NULL != blockBackedImp )
     {
         imp_removeBlock( blockBackedImp );
-        NSMapRemove( selectorImpMap, selector );
+        [selectorImpMap removePointerForPointerKey: selector];
     }
 }
 
 static void _markBlockBackedIMPForSelector( NSMapTable * selectorImpMap, SEL selector, IMP blockBackedImp ) {
 
-    NSMapInsertKnownAbsent( selectorImpMap, selector, blockBackedImp );
+    [selectorImpMap setPointer: blockBackedImp forPointerKey: selector];
 }
 
 static void _releaseAllBlockBackedIMPs( NSMapTable * selectorImpMap ) {
 
-    NSMapEnumerator enumState = NSEnumerateMapTable( selectorImpMap );
+    NSEnumerator * impEnumerator = [selectorImpMap objectEnumerator];
 
-    void * _blockBackedImp = NULL;
-    while( NO != NSNextMapEnumeratorPair( &enumState, NULL, &_blockBackedImp ) )
+    void * blockBackedImp;
+    while(( blockBackedImp = (__bridge void*)[impEnumerator nextObject] ))
     {
-        imp_removeBlock( (IMP)_blockBackedImp );
+        imp_removeBlock( blockBackedImp );
     }
 
-    NSResetMapTable( selectorImpMap );
+    [selectorImpMap removeAllObjects];
 }
 
 @end
