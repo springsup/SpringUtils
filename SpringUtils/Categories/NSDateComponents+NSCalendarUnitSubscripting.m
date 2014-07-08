@@ -48,10 +48,7 @@
     {
         case NSDayCalendarUnit:
             return self.day;
-            
-        case NSWeekCalendarUnit:
-            return self.week;
-            
+
         case NSMonthCalendarUnit:
             return self.month;
             
@@ -87,9 +84,22 @@
             
         case NSYearForWeekOfYearCalendarUnit:
             return self.yearForWeekOfYear;
-            
+
+            /* Deprecated as of iOS7 */
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+        case NSWeekCalendarUnit:
+            return self.week;
+
+#pragma clang diagnostic pop
+
+            /* Unimplemented (class types) */
+
             /* NSCalendarCalendarUnit */
             /* NSTimeZoneCalendarUnit */
+
         default:
             return 0;
     }
@@ -101,10 +111,6 @@
     {
         case NSDayCalendarUnit:
             self.day  = value;
-            break;
-            
-        case NSWeekCalendarUnit:
-            self.week = value;
             break;
             
         case NSMonthCalendarUnit:
@@ -154,9 +160,23 @@
         case NSYearForWeekOfYearCalendarUnit:
             self.yearForWeekOfYear = value;
             break;
-            
+
+            /* Deprecated as of iOS7 */
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+        case NSWeekCalendarUnit:
+            self.week = value;
+            break;
+
+#pragma clang diagnostic pop
+
+            /* Unimplemented (class types) */
+
             /* NSCalendarCalendarUnit */
             /* NSTimeZoneCalendarUnit */
+
         default:
             break;
     }
