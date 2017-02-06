@@ -80,7 +80,7 @@ IMPLEMENT_ASSOCIATED_SCALAR_PROPERTY( pthread_mutex_t *, releaseLock, setRelease
             
             // Override release.
             
-            IMP default_Release = class_getMethodImplementation( originalClass, @selector( release ) );
+            void (*default_Release)(id, SEL) = (void(*)(id, SEL))class_getMethodImplementation( originalClass, @selector( release ) );
             [subclassBuilder addInstanceMethod: [SUMethodBuilder newMethodWithSelector: @selector( release )
                                                                             returnType: @encode( void )
                                                                                  block: ^( NSObject * _self ){
@@ -106,7 +106,7 @@ IMPLEMENT_ASSOCIATED_SCALAR_PROPERTY( pthread_mutex_t *, releaseLock, setRelease
                                                                                          }
                                                                                          
                                                                                          // Invoke default release.
-                                                                                         
+
                                                                                          default_Release( _self, @selector( release ) );
 
                                                                                      pthread_mutex_unlock( releaseLock );

@@ -16,9 +16,9 @@
     
     switch ( calendarUnit )
     {
-        case NSCalendarCalendarUnit:
+        case NSCalendarUnitCalendar:
             return self.calendar;
-        case NSTimeZoneCalendarUnit:
+        case NSCalendarUnitTimeZone:
             return self.timeZone;
         default:
             return @( [self valueForCalendarUnit: calendarUnit] );
@@ -29,9 +29,9 @@
     
     switch ( calendarUnit )
     {
-        case NSCalendarCalendarUnit:
+        case NSCalendarUnitCalendar:
             self.calendar = object;
-        case NSTimeZoneCalendarUnit:
+        case NSCalendarUnitTimeZone:
             self.timeZone = object;
         default:
             [self setValue: [object integerValue] forCalendarUnit: calendarUnit];
@@ -46,43 +46,43 @@
     
     switch ( calendarUnit )
     {
-        case NSDayCalendarUnit:
+        case NSCalendarUnitDay:
             return self.day;
 
-        case NSMonthCalendarUnit:
+        case NSCalendarUnitMonth:
             return self.month;
             
-        case NSQuarterCalendarUnit:
+        case NSCalendarUnitQuarter:
             return self.quarter;
             
-        case NSYearCalendarUnit:
+        case NSCalendarUnitYear:
             return self.year;
             
-        case NSEraCalendarUnit:
+        case NSCalendarUnitEra:
             return self.era;
             
-        case NSHourCalendarUnit:
+        case NSCalendarUnitHour:
             return self.hour;
             
-        case NSMinuteCalendarUnit:
+        case NSCalendarUnitMinute:
             return self.minute;
             
-        case NSSecondCalendarUnit:
+        case NSCalendarUnitSecond:
             return self.second;
             
-        case NSWeekdayCalendarUnit:
+        case NSCalendarUnitWeekday:
             return self.weekday;
             
-        case NSWeekdayOrdinalCalendarUnit:
+        case NSCalendarUnitWeekdayOrdinal:
             return self.weekdayOrdinal;
             
-        case NSWeekOfMonthCalendarUnit:
+        case NSCalendarUnitWeekOfMonth:
             return self.weekOfMonth;
             
-        case NSWeekOfYearCalendarUnit:
+        case NSCalendarUnitWeekOfYear:
             return self.weekOfYear;
             
-        case NSYearForWeekOfYearCalendarUnit:
+        case NSCalendarUnitYearForWeekOfYear:
             return self.yearForWeekOfYear;
 
             /* Deprecated as of iOS7 */
@@ -109,55 +109,55 @@
     
     switch ( calendarUnit )
     {
-        case NSDayCalendarUnit:
+        case NSCalendarUnitDay:
             self.day  = value;
             break;
             
-        case NSMonthCalendarUnit:
+        case NSCalendarUnitMonth:
             self.month = value;
             break;
             
-        case NSQuarterCalendarUnit:
+        case NSCalendarUnitQuarter:
             self.quarter = value;
             break;
             
-        case NSYearCalendarUnit:
+        case NSCalendarUnitYear:
             self.year = value;
             break;
             
-        case NSEraCalendarUnit:
+        case NSCalendarUnitEra:
             self.era = value;
             break;
             
-        case NSHourCalendarUnit:
+        case NSCalendarUnitHour:
             self.hour = value;
             break;
             
-        case NSMinuteCalendarUnit:
+        case NSCalendarUnitMinute:
             self.minute = value;
             break;
             
-        case NSSecondCalendarUnit:
+        case NSCalendarUnitSecond:
             self.second = value;
             break;
             
-        case NSWeekdayCalendarUnit:
+        case NSCalendarUnitWeekday:
             self.weekday = value;
             break;
             
-        case NSWeekdayOrdinalCalendarUnit:
+        case NSCalendarUnitWeekdayOrdinal:
             self.weekdayOrdinal = value;
             break;
             
-        case NSWeekOfMonthCalendarUnit:
+        case NSCalendarUnitWeekOfMonth:
             self.weekOfMonth = value;
             break;
             
-        case NSWeekOfYearCalendarUnit:
+        case NSCalendarUnitWeekOfYear:
             self.weekOfYear = value;
             break;
             
-        case NSYearForWeekOfYearCalendarUnit:
+        case NSCalendarUnitYearForWeekOfYear:
             self.yearForWeekOfYear = value;
             break;
 

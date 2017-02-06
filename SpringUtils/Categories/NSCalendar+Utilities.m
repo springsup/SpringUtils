@@ -16,10 +16,10 @@
     
     // Get all non-time components
     
-    NSDateComponents * components = [self components:   NSDayCalendarUnit   |
-                                                        NSMonthCalendarUnit |
-                                                        NSYearCalendarUnit  |
-                                                        NSEraCalendarUnit
+    NSDateComponents * components = [self components:   NSCalendarUnitDay   |
+                                                        NSCalendarUnitMonth |
+                                                        NSCalendarUnitYear  |
+                                                        NSCalendarUnitEra
                                             fromDate: date];
 
     // Return the date
