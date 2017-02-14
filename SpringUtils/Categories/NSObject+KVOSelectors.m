@@ -38,7 +38,7 @@
     NSInvocation * invocation    = [NSInvocation invocationWithMethodSignature: method];
     invocation.selector          = selector;
     
-    // Obj-C runtime arguments __cmd and SEL
+    // Obj-C runtime arguments self (i.e. target) and __cmd.
     const NSUInteger argumentsOffset = 2;
     
     // Set the first argument to this instance
